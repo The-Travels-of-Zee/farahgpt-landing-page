@@ -7,6 +7,8 @@ import React from "react";
 import HowItWorks from "@/components/HowItWorks";
 import Features from "@/components/Features";
 import AppBanner from "@/components/AppBanner";
+import Pricing from "@/components/Pricing";
+import VideoMockup from "@/components/VideoMockup";
 
 const Main = () => {
   return (
@@ -14,7 +16,9 @@ const Main = () => {
       <div>
         <Header />
         <Features />
+        <VideoMockup videoSrc="/videos/test-video.mp4" />
         <HowItWorks />
+        <Pricing />
         <Faq />
         <AppBanner />
       </div>

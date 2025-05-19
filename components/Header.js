@@ -41,12 +41,12 @@ function Header() {
               <motion.h2
                 initial={{ opacity: 0, rotateZ: -10 }}
                 animate={{ opacity: 1, rotateZ: 0 }}
-                className="mt-0 mb-4 text-4xl text-(--dark) md:text-7xl font-roboto"
+                className="mt-0 mb-4 text-4xl text-gray-800 md:text-7xl font-bold font-roboto"
               >
                 {header.headlineMark ? (
                   <>
                     {header.headline.split(" ").slice(0, header.headlineMark[0]).join(" ")}{" "}
-                    <span className="inline-block font-roboto relative">
+                    <span className="inline-block relative">
                       <span>
                         {header.headline
                           .split(" ")
