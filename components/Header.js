@@ -30,10 +30,10 @@ function Header() {
                     key={index}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="flex items-center self-center h-8 md:h-12"
+                    className="flex items-center  h-8 md:h-12"
                   >
                     <img src="/misc/wreath-left.webp" className="h-full" />
-                    <p className="text-2xl font-amiri font-black text-gray-500 whitespace-pre">{reward}</p>
+                    <p className="text-2xl font-black text-gray-500 whitespace-pre">{reward}</p>
                     <img src="/misc/wreath-right.webp" className="h-full" />
                   </motion.div>
                 ))}
@@ -46,7 +46,7 @@ function Header() {
                 {header.headlineMark ? (
                   <>
                     {header.headline.split(" ").slice(0, header.headlineMark[0]).join(" ")}{" "}
-                    <span className="inline-block relative">
+                    <span className="inline-block font-roboto relative">
                       <span>
                         {header.headline
                           .split(" ")

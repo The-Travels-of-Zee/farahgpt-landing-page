@@ -1,14 +1,14 @@
 import { motion } from "@/lib/motion";
 
 const Path = (props) => (
-  <motion.path fill="transparent" strokeWidth="3" stroke="primary" strokeLinecap="round" {...props} />
+  <motion.path fill="transparent" strokeWidth="3" stroke="currentColor" strokeLinecap="round" {...props} />
 );
 
 const MenuToggle = ({ toggle, isOpen }) => (
   <button
     onClick={toggle}
     aria-label="Toggle Menu"
-    className="text-(--dark) hover:text-secondary focus:outline-none transition-colors duration-200"
+    className="text-primary focus:outline-none transition-colors duration-200"
   >
     <motion.svg initial={false} animate={isOpen ? "open" : "closed"} width="23" height="23" viewBox="0 0 23 23">
       <Path
