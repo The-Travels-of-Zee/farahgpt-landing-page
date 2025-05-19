@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Fonts */
+.font-amiri {
+  font-family: "Amiri-Bold";
+  src: url("/fonts/Amiri-Bold.ttf") format("truetype");
+}
+.font-noto-sans {
+  font-family: "NotoSans";
+  src: url("/fonts/NotoSans-Light.ttf") format("truetype");
+}
+.font-roboto {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+}
+.font-arefruqaa {
+  font-family: "ArefRuqaa";
+  src: url("/fonts/ArefRuqaa-Bold.ttf") format("truetype");
+}
+
+/* Theme Variables Inline */
+@theme inline {
+
+  --primary: #1B9AAA;
+  --primary-light: #93c5fd;
+  --dark: #1B1A17;
+  --danger: #EF476F;
+  --secondary: #06D6A0;
+  --accent: #FFC43D;
+  --muted: #F8FFE5;
+
+  --font-amiri: "Amiri-Bold", sans-serif;
+  --font-noto-sans: "NotoSans", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-aref-ruqaa: "ArefRuqaa", serif;
+
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-secondary: var(--secondary);
+  --color-primary: var(--primary);
+}
+
+/* Global Styles */
+body {
+  background-color: white;
+  font-family: var(--font-noto-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Grid Background */
+.backgroundGrid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -9;
+  background-size: 50px 50px;
+  background-image: linear-gradient(rgba(200, 200, 200, 0.1) 1px, transparent 1px),
+    linear-gradient(to right, rgba(200, 200, 200, 0.1) 1px, transparent 1px);
+}
