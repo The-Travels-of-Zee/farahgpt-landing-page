@@ -2,21 +2,38 @@
 @import "tw-animate-css";
 
 /* Fonts */
-.font-amiri {
+@font-face {
   font-family: "Amiri-Bold";
   src: url("/fonts/Amiri-Bold.ttf") format("truetype");
 }
-.font-noto-sans {
-  font-family: "NotoSans";
+
+@font-face {
+  font-family: "NotoSans-Light";
   src: url("/fonts/NotoSans-Light.ttf") format("truetype");
 }
-.font-roboto {
-  font-family: "Roboto";
+
+@font-face {
+  font-family: "Roboto-Bold";
   src: url("/fonts/Roboto-Bold.ttf") format("truetype");
 }
-.font-arefruqaa {
-  font-family: "ArefRuqaa";
+
+@font-face {
+  font-family: "ArefRuqaa-Bold";
   src: url("/fonts/ArefRuqaa-Bold.ttf") format("truetype");
+}
+
+/* Optional utility classes */
+.font-amiri {
+  font-family: "Amiri-Bold";
+}
+.font-notosans-light {
+  font-family: "NotoSans-Light";
+}
+.font-roboto {
+  font-family: "Roboto-Bold";
+}
+.font-arefruqaa {
+  font-family: "ArefRuqaa-Bold";
 }
 
 /* Theme Variables Inline */
@@ -31,7 +48,7 @@
   --muted: #F8FFE5;
 
   --font-amiri: "Amiri-Bold", sans-serif;
-  --font-noto-sans: "NotoSans", sans-serif;
+  --font-notosans-light: "NotoSans-Light", sans-serif;
   --font-roboto: "Roboto", sans-serif;
   --font-aref-ruqaa: "ArefRuqaa", serif;
 
