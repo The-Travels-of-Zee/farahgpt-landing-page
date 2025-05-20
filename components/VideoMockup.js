@@ -1,5 +1,6 @@
 import { motion } from "@/lib/motion";
 import AnimatedText from "./AnimatedText";
+import IPhoneVideoFrame from "./IPhoneVideoFrame";
 
 export default function VideoMockup({ videoSrc }) {
   if (!videoSrc) return null;
@@ -29,15 +30,11 @@ export default function VideoMockup({ videoSrc }) {
           duration: 0.5,
           delay: 0.3,
         }}
-        className="relative mx-auto w-full h-[548px] 2xs:h-[720px] sm:h-[648px] md:h-[548px] rounded-[3rem]"
+        className="relative mx-auto w-[300px] sm:w-[360px] md:w-[400px] h-auto"
       >
-        <div className="absolute top-2.5 left-3 w-[calc(100%-24px)] h-[calc(100%-16px)] rounded-[1rem] 2xs:rounded-[2rem] overflow-hidden z-0">
-          <video src={videoSrc} autoPlay muted loop playsInline className="w-full h-full object-cover" />
-        </div>
-        <img
-          src="/misc/iphone-frame.webp"
-          alt="iphone-frame"
-          className="relative z-10 h-full mx-auto pointer-events-none"
+        {/* Video should sit behind the phone frame */}
+        <IPhoneVideoFrame
+          src={<video src={videoSrc} autoPlay muted loop playsInline className="w-full h-full object-cover" />}
         />
       </motion.div>
     </section>
