@@ -6,6 +6,8 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { ConfigContext } from "@/utils/configContext";
 import { motion } from "@/lib/motion";
 import { useContext, useState } from "react";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
+import { ChevronDownIcon } from "lucide-react";
 
 function Navbar() {
   const { name, showThemeSwitch, topNavbar, theme } = useContext(ConfigContext);
@@ -30,13 +32,28 @@ function Navbar() {
             </a>
           ))}
           {topNavbar.cta && (
-            <a
-              href="#waitlist"
-              className="ml-4 px-4 py-2 rounded-full text-sm font-semibold border border-primary hover:text-muted text-primary hover:bg-primary transition"
-            >
-              {topNavbar.cta}
-            </a>
+            <HoverCard>
+              <HoverCardTrigger className="group ml-4 px-4 py-2 rounded-full text-sm font-semibold border border-primary hover:text-muted text-primary hover:bg-primary transition flex items-center gap-2">
+                {topNavbar.cta}
+                <ChevronDownIcon className="size-5 transition-transform duration-200 group-hover:rotate-180" />
+              </HoverCardTrigger>
+              <HoverCardContent className="flex flex-col space-y-2 bg-(--dark)/5 backdrop-blur-lg p-4 rounded-lg shadow-lg">
+                <a
+                  href="/users"
+                  className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
+                >
+                  Become User
+                </a>
+                <a
+                  href="/mentors"
+                  className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
+                >
+                  Become Mentor
+                </a>
+              </HoverCardContent>
+            </HoverCard>
           )}
+
           {/* {showThemeSwitch && <ThemeSwitcher />} */}
         </div>
 
