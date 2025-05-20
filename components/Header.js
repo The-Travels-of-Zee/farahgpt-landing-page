@@ -1,18 +1,12 @@
 "use client";
 import { motion, useScroll } from "@/lib/motion";
-import { useContext, useRef } from "react";
-import { ConfigContext } from "@/utils/configContext";
+import { useRef } from "react";
 import SingleScreenshot from "@/components/SingleScreenshot";
 import SVGWave from "@/public/svg/wave";
 import SVGBlob from "@/public/svg/blob";
+import InputEmail from "./InputEmail";
 
-function Header() {
-  const {
-    // googlePlayLink,
-    // appStoreLink,
-    home: { header, partners },
-  } = useContext(ConfigContext);
-
+function Header({ header, partners }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -81,14 +75,21 @@ function Header() {
                 transition={{ delay: 0.6 }}
                 className="list-none flex gap-4 m-0 p-0 text-black"
               >
-                <li className="my-8 p-0">
-                  <a
-                    href="#waitlist"
-                    className="px-4 py-2 rounded-full text-md font-semibold border border-primary hover:text-muted text-primary hover:bg-primary transition"
-                  >
-                    {header.cta}
-                  </a>
-                </li>
+                {!header.input && (
+                  <li className="my-8 p-0">
+                    <a
+                      href="#waitlist"
+                      className="px-4 py-2 rounded-full text-md font-semibold border border-primary hover:text-muted text-primary hover:bg-primary transition"
+                    >
+                      {header.cta}
+                    </a>
+                  </li>
+                )}
+                {header.input && (
+                  <li className="my-8 w-full max-w-md">
+                    <InputEmail title="Notify Me" apiUrl="/api/newsletter" type={header.type} />
+                  </li>
+                )}
                 {/* {googlePlayLink && (
                   <li className="m-0 p-0">
                     <a href={googlePlayLink}>

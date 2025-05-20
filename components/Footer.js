@@ -12,7 +12,7 @@ function Footer() {
   } = useContext(ConfigContext);
 
   return (
-    <footer className="relative bg-primary px-4 py-12">
+    <footer className="relative bg-primary px-4 py-12 mt-12">
       <div className="absolute rounded-t-[50%] -top-12 left-0 bg-primary w-full h-12" />
       <motion.div
         initial="hidden"
