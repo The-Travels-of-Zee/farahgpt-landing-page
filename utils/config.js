@@ -171,12 +171,12 @@ const templateConfig = {
       title: "Frequently Asked Questions",
       qa: [
         {
-          question: "What is FarahAI?",
+          question: "What is FarahGPT?",
           answer:
             '"Farah" is an AI-powered assistant designed to answer your Islamic questions instantly, based on authentic sources and scholarly perspectives. It aims to provide reliable information and guidance on various Islamic topics.',
         },
         {
-          question: "Is FarahAI giving fatwas?",
+          question: "Is FarahGPT giving fatwas?",
           answer:
             "No. Farah is an AI assistant that provides information and guidance based on authentic Islamic knowledge, but it does not replace qualified scholars or personal fatwas. For specific legal rulings, always consult a qualified scholar.",
         },
@@ -241,6 +241,50 @@ const templateConfig = {
             "Full chat histroy access",
             "File uploads",
           ],
+        },
+      ],
+    },
+  },
+  users: {
+    seo: {
+      title: "Users",
+      description: "Users waiting list",
+    },
+    header: {
+      cta: "Join The Waitlist",
+      headline: "Your 24/7 Islamic Mentor, Powered by AI",
+      subtitle: "Learn, ask, and grow at your pace — guided by FarahGPT trained on trusted Islamic content.",
+      screenshots: ["/screenshots/3.png"],
+      rewards: ["إن شاءالله"],
+      usersDescription: "8,000+ people already in the waiting list",
+      headlineMark: [1, 4],
+      input: true,
+      type: "users",
+    },
+    features: {
+      id: "features",
+      title: "A Platform of Barakah",
+      subtitle: "Structured Islamic learning with real mentors—authentic, accessible, and built for your journey.",
+      cards: [
+        {
+          title: "Why Join Our Waitlist?",
+          subtitle: "Discover how this app will transform your Islamic learning journey.",
+          icon: "/3D/link-front-color.webp",
+        },
+        {
+          title: "FarahGPT Mentor",
+          subtitle: "Ask questions 24/7 from a GPT trained on authentic sources.",
+          icon: "/3D/clock-front-color.webp",
+        },
+        {
+          title: "Personalized Learning",
+          subtitle: "Chat adapts to your course level and spiritual goals.",
+          icon: "/3D/roll-brush-front-color.webp",
+        },
+        {
+          title: "Guided by Experts",
+          subtitle: "Mentorship guided by trusted Islamic educators.",
+          icon: "/3D/sheild-front-color.webp",
         },
       ],
     },

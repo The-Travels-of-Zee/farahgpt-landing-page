@@ -1,15 +1,8 @@
 import AnimatedText from "@/components/AnimatedText";
 import clsx from "clsx";
 import { motion } from "@/lib/motion";
-import { useContext } from "react";
-import { ConfigContext } from "@/utils/configContext";
 
-function Features() {
-  const {
-    home: { features },
-  } = useContext(ConfigContext);
-  if (!features) return null;
-
+function Features({ features }) {
   return (
     <section id={features.id} className="max-w-screen-lg mx-auto px-4 py-12">
       <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
@@ -64,7 +57,7 @@ function Features() {
             </div>
             <div className="w-full pt-0 px-0 card-body items-center text-center transition-transform max-w-none group-hover:scale-95">
               <h2 className="card-title text-2xl font-bold">{feat.title}</h2>
-              <div className="h-0.5 w-full bg-primary/10" />
+              <div className="h-0.5 my-2 w-full bg-primary/10" />
               <p className="opacity-[.7]">{feat.subtitle}</p>
             </div>
           </motion.div>
