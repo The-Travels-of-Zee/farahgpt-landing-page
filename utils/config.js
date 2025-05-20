@@ -16,8 +16,8 @@ const templateConfig = {
   googlePlayLink: "https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox",
   footer: {
     legalLinks: {
-      termsAndConditions: true,
-      cookiesPolicy: true,
+      // termsAndConditions: true,
+      // cookiesPolicy: true,
       privacyPolicy: true,
     },
     socials: {
@@ -99,38 +99,45 @@ const templateConfig = {
     },
     howItWorks: {
       id: "how-it-works",
-      title: "How it works",
+      title: "How It Works",
       subtitle:
-        "Explore our comprehensive step-by-step guide to understand how our process ensures seamless and effective results",
+        "Begin your journey of seeking and sharing knowledge with these simple steps, rooted in sincerity and ease.",
       steps: [
         {
-          title: "Install the App",
-          subtitle: "Download and install the app on your device to get started quickly and easily.",
-          image: "/stock/01.webp",
-        },
-        {
-          title: "Create an Account",
+          title: "Choose Your Path",
           subtitle:
-            "Sign up by entering your personal details and verifying your email to create a new account in just a few minutes.",
-          image: "/stock/02.webp",
+            "Sign up and select whether you're a Student (طالب علم) or a Mentor (معلم). Your journey begins here.",
+          image: "/images/choose-role.webp",
         },
         {
           title: "Set Up Your Profile",
           subtitle:
-            "Complete your profile by adding necessary information and preferences to personalize your experience on the platform.",
-          image: "/stock/03.webp",
+            "Create a profile that reflects your goals and interests. Mentors can showcase their expertise, while students highlight areas of focus.",
+          image: "/images/setup-profile.webp",
         },
         {
-          title: "Explore Features",
+          title: "Browse or Upload Courses",
           subtitle:
-            "Navigate through the app to discover various features and tools designed to enhance your productivity and engagement.",
-          image: "/stock/04.webp",
+            "Students can explore a growing library of paid and free courses in Qur’an, Hadith, Fiqh, Arabic, and more. Mentors can upload and manage structured lessons with ease.",
+          image: "/images/browse-courses.webp",
         },
         {
-          title: "Connect with Others",
+          title: "Get Support from FarahGPT",
           subtitle:
-            "Start connecting with friends, colleagues, and like-minded individuals to expand your network and collaborate efficiently.",
-          image: "/stock/05.webp",
+            "Meet FarahGPT — your AI-powered Islamic assistant. Ask questions about course material, get authentic references, and receive guidance based on trusted scholarly sources.",
+          image: "/images/farahgpt-help.webp",
+        },
+        {
+          title: "Learn and Interact",
+          subtitle:
+            "Join live classes or watch recordings. Ask questions, leave feedback, and benefit from direct mentor guidance—all in one place.",
+          image: "/images/learn-interact.webp",
+        },
+        {
+          title: "Grow with Consistency (Istiqamah)",
+          subtitle:
+            "Track your learning, set goals, and build habits of consistent seeking or teaching of knowledge—striving for barakah and impact.",
+          image: "/images/grow-consistency.webp",
         },
       ],
     },
@@ -338,9 +345,21 @@ const templateConfig = {
       id: "how-it-works",
       title: "How It Works",
       steps: [
-        { title: "1. Sign Up", description: "Apply to become a mentor and get verified." },
-        { title: "2. Upload Courses", description: "Use our platform to design video, audio, or text-based lessons." },
-        { title: "3. Earn & Engage", description: "Earn revenue and help students progress in their deen." },
+        {
+          title: "1. Sign Up",
+          subtitle: "Apply to become a mentor and get verified.",
+          image: "/svg/mentor-signup.svg",
+        },
+        {
+          title: "2. Upload Courses",
+          subtitle: "Use our platform to design video, audio, or text-based lessons.",
+          image: "/svg/upload-courses.svg",
+        },
+        {
+          title: "3. Earn & Engage",
+          subtitle: "Earn revenue and help students progress in their deen.",
+          image: "/images/mentor-earn.webp",
+        },
       ],
     },
   },

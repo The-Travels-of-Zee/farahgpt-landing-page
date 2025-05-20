@@ -89,7 +89,7 @@ function HowItWorks({ howItWorks }) {
               }}
               className="flex-1 flex justify-center"
             >
-              <img className="rounded-3xl lg:w-[75%]" src={step.image} alt={`step ${index}`} />
+              <img className="rounded-3xl lg:w-[75%] h-[260px] object-cover" src={step.image} alt={`step ${index}`} />
             </motion.div>
           </motion.div>
         ))}
