@@ -14,15 +14,15 @@ const Main = () => {
   const {
     // googlePlayLink,
     // appStoreLink,
-    home: { header, features, partners },
+    home: { header, features, partners, howItWorks },
   } = useContext(ConfigContext);
   return (
     <ConfigContext.Provider value={templateConfig}>
       <div>
-        <Header header={header} partners={partners}/>
+        <Header header={header} partners={partners} />
         <Features features={features} />
         <VideoMockup videoSrc="/videos/test-video.mp4" />
-        <HowItWorks />
+        <HowItWorks howItWorks={howItWorks} />
         <Pricing />
         <Faq />
         <AppBanner />

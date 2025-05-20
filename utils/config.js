@@ -186,12 +186,12 @@ const templateConfig = {
             "Answers are generated using GPT-4 Turbo AI, trained on authentic Islamic resources and verified content. However, users should always consult a trusted scholar for personal or complex issues. The AI is a tool to assist, not a replacement for scholarly advice.",
         },
         {
-          question: "Is the AI trained by real Islamic scholars?",
+          question: "Is the FarahGPT trained by real Islamic scholars?",
           answer:
-            "The responses are based on datasets compiled from reliable Islamic books, hadith, and scholarly works. We're continuously improving by collaborating with scholars to enhance accuracy. However, the AI itself is not a scholar.",
+            "The responses are based on datasets compiled from reliable Islamic books, hadith, and scholarly works. However, the AI itself is not a scholar.",
         },
         {
-          question: "How does the AI ensure Islamic authenticity?",
+          question: "How does the FarahGPT ensure Islamic authenticity?",
           answer:
             "The AI uses curated data from reliable Islamic sources, but as it's a machine-generated response, users should verify sensitive matters. We recommend consulting a qualified scholar for personal or complex issues.",
         },
@@ -286,6 +286,61 @@ const templateConfig = {
           subtitle: "Mentorship guided by trusted Islamic educators.",
           icon: "/3D/sheild-front-color.webp",
         },
+      ],
+    },
+  },
+  mentors: {
+    seo: {
+      title: "Mentors",
+      description: "Empower the Ummah. Share Your Knowledge. Earn with Purpose.",
+    },
+    header: {
+      cta: "Become a Mentor",
+      headline: "Monetize Your Islamic Knowledge, Inspire Thousands",
+      subtitle:
+        "Upload structured courses, connect with seekers, and earn—while being part of a purpose-driven platform powered by FarahGPT.",
+      screenshots: ["/screenshots/4.png"],
+      rewards: ["ثواب"],
+      usersDescription: "Join a growing network of trusted Islamic educators",
+      headlineMark: [4, 6],
+      input: true,
+      type: "mentors",
+    },
+    features: {
+      id: "features",
+      title: "Why Mentor With Us?",
+      subtitle: "Amplify your dawah and income with a powerful, faith-aligned platform.",
+      cards: [
+        {
+          title: "Launch Your Online Courses",
+          subtitle: "Design structured Islamic courses with our easy-to-use dashboard.",
+          icon: "/3D/rocket-front-color.webp",
+        },
+        {
+          title: "Passive & Purposeful Income",
+          subtitle: "Earn as users subscribe to your courses while benefiting them spiritually.",
+          icon: "/3D/dollar-front-color.webp",
+        },
+        {
+          title: "Global Reach",
+          subtitle: "Connect with thousands of learners across the globe seeking authentic guidance.",
+          icon: "/3D/target-front-color.webp",
+        },
+        {
+          title: "AI-Powered Assistance",
+          subtitle:
+            "FarahGPT complements your courses, providing 24/7 support to students trained on authentic material.",
+          icon: "/3D/bulb-front-color.webp",
+        },
+      ],
+    },
+    howItWorks: {
+      id: "how-it-works",
+      title: "How It Works",
+      steps: [
+        { title: "1. Sign Up", description: "Apply to become a mentor and get verified." },
+        { title: "2. Upload Courses", description: "Use our platform to design video, audio, or text-based lessons." },
+        { title: "3. Earn & Engage", description: "Earn revenue and help students progress in their deen." },
       ],
     },
   },

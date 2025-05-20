@@ -7,11 +7,7 @@ import SwirlArrowBottomLeft from "@/public/svg/swirlArrowBottomLeft";
 import SwirlArrowBottomRight from "@/public/svg/swirlArrowBottomRight";
 import SwirlArrowBottom from "@/public/svg/swirlArrowBottom";
 
-function HowItWorks() {
-  const {
-    home: { howItWorks },
-  } = useContext(ConfigContext);
-
+function HowItWorks({ howItWorks }) {
   if (!howItWorks) return null;
 
   return (

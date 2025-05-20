@@ -5,18 +5,25 @@ import SingleScreenshot from "@/components/SingleScreenshot";
 import SVGWave from "@/public/svg/wave";
 import SVGBlob from "@/public/svg/blob";
 import InputEmail from "./InputEmail";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 
 function Header({ header, partners }) {
+  if (!header) return null;
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
+    offset: ["start start", "end end"],
   });
+
+  // Determine container height and parent height based on screenshot count
+  const containerHeight = header.screenshots.length === 1 ? "min-h-screen" : "min-h-[300vh]";
+  const leftColumnHeight = header.screenshots.length === 1 ? "h-auto" : "md:h-[300vh]";
 
   return (
     <section id={header.id} className="relative pb-8 md:pb-4">
       <div className="max-w-screen-lg mx-auto py-12 px-4 md:py-16">
         <div className="flex flex-col md:flex-row">
-          <div className="flex flex-1 items-center md:items-start md:h-[300vh]">
+          <div className={`flex flex-1 items-center md:items-start ${leftColumnHeight}`}>
             <div className="static top-40 flex flex-col prose justify-center py-8 md:sticky md:h-[548px]">
               <div className="flex flex-col gap-2 my-4 3xs:flex-row">
                 {header.rewards?.map((reward, index) => (
@@ -24,7 +31,7 @@ function Header({ header, partners }) {
                     key={index}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="flex items-center  h-8 md:h-12"
+                    className="flex items-center h-8 md:h-12"
                   >
                     <img src="/misc/wreath-left.webp" className="h-full" />
                     <p className="text-2xl font-black text-gray-500 whitespace-pre">{reward}</p>
@@ -76,42 +83,31 @@ function Header({ header, partners }) {
                 className="list-none flex gap-4 m-0 p-0 text-black"
               >
                 {!header.input && (
-                  <li className="my-8 p-0">
-                    <a
-                      href="#waitlist"
-                      className="px-4 py-2 rounded-full text-md font-semibold border border-primary hover:text-muted text-primary hover:bg-primary transition"
-                    >
+                  <HoverCard>
+                    <HoverCardTrigger className="group px-4 py-2 my-6 rounded-full text-sm font-semibold border border-primary hover:text-muted text-primary hover:bg-primary transition flex items-center gap-2">
                       {header.cta}
-                    </a>
-                  </li>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="flex flex-col space-y-2 bg-white backdrop-blur-lg p-4 rounded-lg shadow-lg">
+                      <a
+                        href="/users"
+                        className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
+                      >
+                        Become User
+                      </a>
+                      <a
+                        href="/mentors"
+                        className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
+                      >
+                        Become Mentor
+                      </a>
+                    </HoverCardContent>
+                  </HoverCard>
                 )}
                 {header.input && (
                   <li className="my-8 w-full max-w-md">
                     <InputEmail title="Notify Me" apiUrl="/api/newsletter" type={header.type} />
                   </li>
                 )}
-                {/* {googlePlayLink && (
-                  <li className="m-0 p-0">
-                    <a href={googlePlayLink}>
-                      <img
-                        className="h-14"
-                        alt="google play logo"
-                        src="/stores/google-play.svg"
-                      />
-                    </a>
-                  </li>
-                )}
-                {appStoreLink && (
-                  <li className="m-0 p-0">
-                    <a href={appStoreLink}>
-                      <img
-                        className="h-14"
-                        alt="app store logo"
-                        src="/stores/app-store.svg"
-                      />
-                    </a>
-                  </li>
-                )} */}
               </motion.ul>
               {header.usersDescription && (
                 <div className="not-prose flex items-center gap-3 my-1">
@@ -144,8 +140,11 @@ function Header({ header, partners }) {
               )}
             </div>
           </div>
-          <div className="min-h-[300vh] z-[-1]" ref={ref}>
-            <div className="flex justify-center sticky top-28 md:top-40">
+          <div
+            className={`${containerHeight} z-[-1] ${header.screenshots.length === 1 ? "flex items-center" : ""}`}
+            ref={ref}
+          >
+            <div className={`${header.screenshots.length === 1 ? "" : "sticky"} top-28 md:top-40 flex justify-center`}>
               <SVGBlob
                 scrollYProgress={scrollYProgress}
                 className="-z-10 absolute hidden w-[800px] -top-20 -right-60 md:hidden xl:block"
@@ -179,7 +178,6 @@ function Header({ header, partners }) {
           </div>
         </div>
       </div>
-      {/* {partners && <SVGWave className="absolute text-[#fbe1b6] -bottom-1 left-0 right-0 -z-10" />} */}
     </section>
   );
 }

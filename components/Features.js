@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { motion } from "@/lib/motion";
 
 function Features({ features }) {
+  if (!features) return null;
   return (
     <section id={features.id} className="max-w-screen-lg mx-auto px-4 py-12">
       <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
