@@ -2,28 +2,47 @@
 
 import * as React from "react";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
-
 import { cn } from "@/lib/utils";
 
-function HoverCard({ openDelay = 50, closeDelay = 1000, ...props }) {
-  return <HoverCardPrimitive.Root data-slot="hover-card" openDelay={openDelay} closeDelay={closeDelay} {...props} />;
+
+// Add state for manual control
+function HoverCard({ openDelay = 50, closeDelay = 1000, children, ...props }) {
+  const [open, setOpen] = React.useState(false);
+
+  // Optional: detect if device is touch-enabled
+  const isTouchDevice = typeof window !== "undefined" && "ontouchstart" in window;
+
+  return (
+    <HoverCardPrimitive.Root
+      openDelay={openDelay}
+      closeDelay={closeDelay}
+      open={isTouchDevice ? open : undefined}
+      onOpenChange={isTouchDevice ? setOpen : undefined}
+      {...props}
+    >
+      {React.Children.map(children, (child) => {
+        if (React.isValidElement(child) && child.type === HoverCardTrigger) {
+          return React.cloneElement(child, {
+            onClick: isTouchDevice ? () => setOpen((prev) => !prev) : undefined,
+          });
+        }
+        return child;
+      })}
+    </HoverCardPrimitive.Root>
+  );
 }
 
-function HoverCardTrigger({ ...props }) {
-  return <HoverCardPrimitive.Trigger data-slot="hover-card-trigger" {...props} />;
+function HoverCardTrigger(props) {
+  return <HoverCardPrimitive.Trigger {...props} />;
 }
 
 function HoverCardContent({ className, align = "center", sideOffset = 4, ...props }) {
   return (
-    <HoverCardPrimitive.Portal data-slot="hover-card-portal">
+    <HoverCardPrimitive.Portal>
       <HoverCardPrimitive.Content
-        data-slot="hover-card-content"
         align={align}
         sideOffset={sideOffset}
-        className={cn(
-          "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-64 origin-(--radix-hover-card-content-transform-origin) rounded-md p-4 shadow-md outline-hidden",
-          className
-        )}
+        className={cn("bg-white backdrop-blur-lg p-4 rounded-lg shadow-lg z-50 w-64", className)}
         {...props}
       />
     </HoverCardPrimitive.Portal>

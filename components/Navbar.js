@@ -84,12 +84,20 @@ function Navbar() {
           </motion.a>
         ))}
         {topNavbar.cta && (
-          <a
-            href="#waitlist"
-            className="mt-4 text-center px-4 py-2 rounded-full text-sm font-semibold border border-white text-white hover:bg-primary hover:text-white transition"
-          >
-            {topNavbar.cta}
-          </a>
+          <>
+            <a
+              href="/users"
+              className="mt-4 text-center px-4 py-2 rounded-full text-sm font-semibold border border-white text-white hover:bg-primary hover:text-white transition"
+            >
+              Become User
+            </a>
+            <a
+              href="/mentors"
+              className="mt-2 text-center px-4 py-2 rounded-full text-sm font-semibold border border-white text-white hover:bg-primary hover:text-white transition"
+            >
+              Become Mentor
+            </a>
+          </>
         )}
       </AnimatedList>
     </nav>
