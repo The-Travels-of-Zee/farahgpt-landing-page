@@ -19,7 +19,11 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 md:py-4">
         {/* Logo / Title */}
         <div className="flex items-center space-x-2">
-          <a href="/" className="text-2xl md:text-3xl font-bold font-amiri text-(--dark) hover:text-primary transition">
+          <a
+            href="/"
+            className="text-2xl md:text-3xl font-bold font-roboto text-(--dark)/80 hover:text-primary transition"
+          >
+            <img src="./favicon/favicon.svg" width={48} height={48} alt="farahgpt-logo" className="inline mr-2" />
             {name}
           </a>
         </div>
