@@ -404,16 +404,16 @@ const templateConfig = {
   },
   privacyPolicy: {
     seo: {
-      title: "Privacy Policy - Mobile App Landing Template",
+      title: "Privacy Policy - FarahGPT",
       description: "Privacy Policy",
     },
     content: `# Privacy Policy
 
-**Effective Date:** [Insert Date]
+**Last Updated:** 21/5/2025
 
 ## Introduction
 
-Welcome to [Your App Name] (the "App"). [Your Company Name] ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you use our App.
+Welcome to FarahGPT. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you use our App.
 
 ## Information We Collect
 
@@ -461,10 +461,11 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 
 If you have any questions or concerns about this Privacy Policy, please contact us at:
 
-[Your Company Name]  
-[Your Contact Information]  
-[Email Address]  
-[Phone Number (optional)]
+FarahGPT
+
+📧 [support@farahgpt.com](mailto:support@farahgpt.com)  
+🕌 With sincerity and responsibility,  
+**Team Farah**
 
 `,
   },
