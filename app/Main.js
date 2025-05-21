@@ -18,7 +18,7 @@ const Main = () => {
   } = useContext(ConfigContext);
   return (
     <ConfigContext.Provider value={templateConfig}>
-      <div>
+      <main>
         <Header header={header} partners={partners} />
         <Features features={features} />
         <VideoMockup videoSrc="/videos/test-video.mp4" />
@@ -26,7 +26,7 @@ const Main = () => {
         <Pricing />
         <Faq />
         <AppBanner />
-      </div>
+      </main>
     </ConfigContext.Provider>
   );
 };

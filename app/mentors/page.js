@@ -1,4 +1,5 @@
 "use client";
+import AppBanner from "@/components/AppBanner";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import Header from "@/components/Header";
@@ -18,6 +19,7 @@ const mentors = () => {
       <Features features={features} />
       <HowItWorks howItWorks={howItWorks} />
       <Faq />
+      <AppBanner />
     </div>
   );
 };
