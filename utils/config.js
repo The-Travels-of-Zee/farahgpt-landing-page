@@ -50,7 +50,11 @@ const templateConfig = {
     title: "Download Our Mobile App Today!",
     subtitle:
       "Unlock the full potential of our services with seamless access at your fingertips. Stay connected, informed, and in control wherever you are.",
-    screenshots: ["/screenshots/1.png", "/screenshots/2.png", "/screenshots/3.png"],
+    screenshots: [
+      "/screenshots/seller-courses.png",
+      "/screenshots/farahgpt-course.png",
+      "/screenshots/explore-courses.png",
+    ],
   },
   home: {
     seo: {
@@ -219,7 +223,11 @@ const templateConfig = {
       cta: "Join The Waitlist",
       headline: "Pursue Sacred Knowledge with Purpose",
       subtitle: "Join a growing ummah of students and mentors united by the light of Islamic knowledge.",
-      screenshots: ["/screenshots/3.png", "/screenshots/2.png", "/screenshots/1.png"],
+      screenshots: [
+        "/screenshots/seller-courses.png",
+        "/screenshots/farahgpt-course.png",
+        "/screenshots/explore-courses.png",
+      ],
       rewards: ["ماشاءالله"],
       usersDescription: "8,000+ people already in the waiting list",
       headlineMark: [1, 3],
@@ -262,7 +270,11 @@ const templateConfig = {
       cta: "Join The Waitlist",
       headline: "Your 24/7 Islamic Mentor, Powered by AI",
       subtitle: "Learn, ask, and grow at your pace — guided by FarahGPT trained on trusted Islamic content.",
-      screenshots: ["/screenshots/3.png"],
+      screenshots: [
+        "/screenshots/user-premium.png",
+        "/screenshots/explore-courses.png",
+        "/screenshots/create-user-account.png",
+      ],
       rewards: ["إن شاءالله"],
       usersDescription: "8,000+ people already in the waiting list",
       headlineMark: [1, 4],
@@ -345,7 +357,11 @@ const templateConfig = {
       headline: "Monetize Your Islamic Knowledge, Inspire Thousands",
       subtitle:
         "Upload structured courses, connect with seekers, and earn—while being part of a purpose-driven platform powered by FarahGPT.",
-      screenshots: ["/screenshots/4.png"],
+      screenshots: [
+        "/screenshots/seller-settings-page.png",
+        "/screenshots/seller-courses.png",
+        "/screenshots/create-seller-account.png",
+      ],
       rewards: ["ثواب"],
       usersDescription: "Join a growing network of trusted Islamic educators",
       headlineMark: [4, 6],
