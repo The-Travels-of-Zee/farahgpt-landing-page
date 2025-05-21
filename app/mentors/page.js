@@ -1,4 +1,5 @@
 "use client";
+import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import Header from "@/components/Header";
 import HowItWorks from "@/components/HowItWorks";
@@ -16,6 +17,7 @@ const mentors = () => {
       <VideoMockup videoSrc="/videos/test-video.mp4" />
       <Features features={features} />
       <HowItWorks howItWorks={howItWorks} />
+      <Faq />
     </div>
   );
 };

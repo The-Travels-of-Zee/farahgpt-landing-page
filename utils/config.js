@@ -38,6 +38,7 @@ const templateConfig = {
     hideAppStore: false,
     hideGooglePlay: false,
     links: [
+      { href: "/", title: "Home" },
       { href: "/#features", title: "Features" },
       { href: "/#how-it-works", title: "How it works" },
       { href: "/#pricing", title: "Pricing" },
@@ -292,6 +293,44 @@ const templateConfig = {
           title: "Guided by Experts",
           subtitle: "Mentorship guided by trusted Islamic educators.",
           icon: "/3D/sheild-front-color.webp",
+        },
+      ],
+    },
+    howItWorks: {
+      id: "how-it-works",
+      title: "How It Works",
+      subtitle:
+        "Begin your journey of knowledge with clarity and sincerity. Here's how to get started as a student of deen.",
+      steps: [
+        {
+          title: "1. Sign Up with Intention",
+          subtitle:
+            "Create your free account and set your niyyah (intention) to seek knowledge for the sake of Allah ﷻ.",
+          image: "/images/choose-role.webp",
+        },
+        {
+          title: "2. Discover Courses That Uplift",
+          subtitle:
+            "Browse a range of authentic courses—from Qur’an and Tafsir to Arabic, Fiqh, and more. Start free or enroll in premium classes.",
+          image: "/images/browse-courses.webp",
+        },
+        {
+          title: "3. Learn at Your Own Pace",
+          subtitle:
+            "Access lessons anytime. Watch videos, read materials, and revisit recordings—on your own time, with full flexibility.",
+          image: "/images/learn-at-your-pace.webp",
+        },
+        {
+          title: "4. Ask & Reflect with FarahGPT",
+          subtitle:
+            "Have questions? FarahGPT is here to help with answers grounded in authentic Islamic sources—24/7 support, just a message away.",
+          image: "/images/farahgpt-help.webp",
+        },
+        {
+          title: "5. Grow with Barakah",
+          subtitle:
+            "Track your learning. Set goals. Stay consistent. Let your efforts grow with istiqamah, and trust that Allah ﷻ sees every step.",
+          image: "/images/grow-consistency.webp",
         },
       ],
     },
