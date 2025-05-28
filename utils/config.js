@@ -20,6 +20,10 @@ const templateConfig = {
       // cookiesPolicy: true,
       privacyPolicy: true,
     },
+    poweredBy: {
+      title: "The Travels of Zee",
+      link: "https://business.thetravelsofzee.com/",
+    },
     socials: {
       instagram: "https://instagram.com/google",
       facebook: "https://facebook.com/google",
@@ -135,46 +139,46 @@ const templateConfig = {
         {
           title: "Learn and Interact",
           subtitle:
-            "Join live classes or watch recordings. Ask questions, leave feedback, and benefit from direct mentor guidance—all in one place.",
+            "Join live classes or watch recordings. Ask questions, leave feedback, and benefit from direct mentor guidance, all in one place.",
           image: "/images/learn-interact.webp",
         },
         {
           title: "Grow with Consistency (Istiqamah)",
           subtitle:
-            "Track your learning, set goals, and build habits of consistent seeking or teaching of knowledge—striving for barakah and impact.",
+            "Track your learning, set goals, and build habits of consistent seeking or teaching of knowledge, striving for barakah and impact.",
           image: "/images/grow-consistency.webp",
         },
       ],
     },
     features: {
       id: "features",
-      title: "A Platform of Barakah",
+      title: "Why FarahGPT? Because it’s crafted with your values at its core.",
       subtitle:
-        "Connecting students and mentors in a trusted space to pursue authentic Islamic learning—structured, accessible, and rooted in sincerity.",
+        "In a digital world brimming with AI assistants, FarahGPT stands out by aligning technology with Islamic principles. It’s not just about providing answers; it’s about ensuring those answers resonate with your faith and lifestyle.",
       cards: [
         {
-          title: "A Knowledge Marketplace",
+          title: "Faith-Aligned Guidance",
           subtitle:
-            "Discover a growing platform where students of Islamic knowledge connect with qualified mentors in Qur’an, Hadith, Fiqh, Arabic, and more — all in one place.",
+            "Ever sought financial advice only to be presented with options that conflict with halal practices? FarahGPT understands and respects your values, offering solutions that are both effective and permissible.",
           icon: "/3D/link-front-color.webp",
         },
         {
-          title: "Authentic & Structured Learning",
+          title: "Authentic Knowledge Base",
           subtitle:
-            "Every course is curated to ensure authenticity and alignment with sound Islamic scholarship. Learn with confidence from trustworthy sources.",
-          icon: "/3D/clock-front-color.webp",
-        },
-        {
-          title: "Accessible Anywhere",
-          subtitle:
-            "No matter where you are, access live and recorded sessions at your convenience. All you need is your intention and a connection.",
-          icon: "/3D/roll-brush-front-color.webp",
-        },
-        {
-          title: "Built for the Ummah",
-          subtitle:
-            "Students and teachers come together with sincerity (ikhlas) to seek beneficial knowledge (nafi’) and help elevate one another in faith and practice.",
+            "By integrating existing AI capabilities with meticulously vetted Islamic data, FarahGPT ensures the information you receive is both accurate and appropriate.",
           icon: "/3D/sheild-front-color.webp",
+        },
+        {
+          title: "Affordable Access",
+          subtitle:
+            "Quality AI assistance shouldn’t come at a premium. FarahGPT offers cost-effective solutions without compromising on integrity or performance.",
+          icon: "/3D/dollar-front-color.webp",
+        },
+        {
+          title: "Community-Centric Design",
+          subtitle:
+            "Built by Muslims for Muslims, FarahGPT is more than a tool, it’s a companion that understands your unique needs.",
+          icon: "/3D/roll-brush-front-color.webp",
         },
       ],
     },
@@ -221,16 +225,16 @@ const templateConfig = {
     },
     header: {
       cta: "Join The Waitlist",
-      headline: "Pursue Sacred Knowledge with Purpose",
+      headline: "FarahGPT - AI Islamic Assistant. For Muslims, by Muslims.",
       subtitle: "Join a growing ummah of students and mentors united by the light of Islamic knowledge.",
       screenshots: [
-        "/screenshots/seller-courses.png",
+        // "/screenshots/seller-courses.png",
         "/screenshots/farahgpt-course.png",
-        "/screenshots/explore-courses.png",
+        // "/screenshots/explore-courses.png",
       ],
-      rewards: ["ماشاءالله"],
-      usersDescription: "8,000+ people already in the waiting list",
-      headlineMark: [1, 3],
+      rewards: ["إن شاءالله"],
+      usersDescription: "2,000+ people already in the waiting list",
+      headlineMark: [2, 5],
     },
     pricing: {
       id: "pricing",
@@ -268,43 +272,48 @@ const templateConfig = {
     },
     header: {
       cta: "Join The Waitlist",
-      headline: "Your 24/7 Islamic Mentor, Powered by AI",
-      subtitle: "Learn, ask, and grow at your pace — guided by FarahGPT trained on trusted Islamic content.",
+      headline: "Why FarahGPT? when there are already so many AI assistants?",
+      subtitle: "Learn, ask, and grow at your pace, guided by FarahGPT trained on trusted Islamic content.",
       screenshots: [
-        "/screenshots/user-premium.png",
+        // "/screenshots/user-premium.png",
         "/screenshots/explore-courses.png",
-        "/screenshots/create-user-account.png",
+        // "/screenshots/create-user-account.png",
       ],
       rewards: ["إن شاءالله"],
-      usersDescription: "8,000+ people already in the waiting list",
-      headlineMark: [1, 4],
+      usersDescription: "2,000+ people already in the waiting list",
+      headlineMark: [1, 2],
       input: true,
       type: "users",
     },
     features: {
       id: "features",
-      title: "A Platform of Barakah",
-      subtitle: "Structured Islamic learning with real mentors—authentic, accessible, and built for your journey.",
+      title: "Why FarahGPT? Because it’s crafted with your values at its core.",
+      subtitle:
+        "In a digital world brimming with AI assistants, FarahGPT stands out by aligning technology with Islamic principles. It’s not just about providing answers; it’s about ensuring those answers resonate with your faith and lifestyle.",
       cards: [
         {
-          title: "Why Join Our Waitlist?",
-          subtitle: "Discover how this app will transform your Islamic learning journey.",
+          title: "Faith-Aligned Guidance",
+          subtitle:
+            "Ever sought financial advice only to be presented with options that conflict with halal practices? FarahGPT understands and respects your values, offering solutions that are both effective and permissible.",
           icon: "/3D/link-front-color.webp",
         },
         {
-          title: "FarahGPT Mentor",
-          subtitle: "Ask questions 24/7 from a GPT trained on authentic sources.",
-          icon: "/3D/clock-front-color.webp",
-        },
-        {
-          title: "Personalized Learning",
-          subtitle: "Chat adapts to your course level and spiritual goals.",
-          icon: "/3D/roll-brush-front-color.webp",
-        },
-        {
-          title: "Guided by Experts",
-          subtitle: "Mentorship guided by trusted Islamic educators.",
+          title: "Authentic Knowledge Base",
+          subtitle:
+            "By integrating existing AI capabilities with meticulously vetted Islamic data, FarahGPT ensures the information you receive is both accurate and appropriate.",
           icon: "/3D/sheild-front-color.webp",
+        },
+        {
+          title: "Affordable Access",
+          subtitle:
+            "Quality AI assistance shouldn’t come at a premium. FarahGPT offers cost-effective solutions without compromising on integrity or performance.",
+          icon: "/3D/dollar-front-color.webp",
+        },
+        {
+          title: "Community-Centric Design",
+          subtitle:
+            "Built by Muslims for Muslims, FarahGPT is more than a tool, it’s a companion that understands your unique needs.",
+          icon: "/3D/roll-brush-front-color.webp",
         },
       ],
     },
@@ -322,20 +331,19 @@ const templateConfig = {
         },
         {
           title: "2. Discover Courses That Uplift",
-          subtitle:
-            "Browse a range of authentic courses—from Qur’an and Tafsir to Arabic, Fiqh, and more. Start free or enroll in premium classes.",
+          subtitle: "Browse a range of authentic courses with FarahGPT AI assisting you with learning.",
           image: "/images/browse-courses.webp",
         },
         {
           title: "3. Learn at Your Own Pace",
           subtitle:
-            "Access lessons anytime. Watch videos, read materials, and revisit recordings—on your own time, with full flexibility.",
+            "Access lessons anytime. Watch videos, read materials, and revisit recordings, on your own time, with full flexibility.",
           image: "/images/learn-at-your-pace.webp",
         },
         {
           title: "4. Ask & Reflect with FarahGPT",
           subtitle:
-            "Have questions? FarahGPT is here to help with answers grounded in authentic Islamic sources—24/7 support, just a message away.",
+            "Have questions? FarahGPT is here to help with answers grounded in authentic Islamic sources, 24/7 support, just a message away.",
           image: "/images/farahgpt-help.webp",
         },
         {
@@ -354,45 +362,49 @@ const templateConfig = {
     },
     header: {
       cta: "Become a Mentor",
-      headline: "Monetize Your Islamic Knowledge, Inspire Thousands",
+      headline: "Why not just use a customGPT on any other AI platform for your course?",
       subtitle:
-        "Upload structured courses, connect with seekers, and earn—while being part of a purpose-driven platform powered by FarahGPT.",
+        "Security for Instructors sharing their course content with GPTs. Fine-tuned model according to Islamic instructions.",
       screenshots: [
-        "/screenshots/seller-settings-page.png",
+        // "/screenshots/seller-settings-page.png",
         "/screenshots/seller-courses.png",
-        "/screenshots/create-seller-account.png",
+        // "/screenshots/create-seller-account.png",
       ],
-      rewards: ["ثواب"],
+      rewards: ["إن شاءالله"],
       usersDescription: "Join a growing network of trusted Islamic educators",
-      headlineMark: [4, 6],
+      // headlineMark: [4, 6],
       input: true,
       type: "mentors",
     },
     features: {
       id: "features",
-      title: "Why Mentor With Us?",
-      subtitle: "Amplify your dawah and income with a powerful, faith-aligned platform.",
+      title: "Why not just use a custom GPT for your course?",
+      subtitle:
+        "Elevate your teaching with FarahGPT’s tailored solutions. While custom GPTs offer a degree of personalization, they often fall short in providing the control and exclusivity educators require.",
       cards: [
         {
-          title: "Launch Your Online Courses",
-          subtitle: "Design structured Islamic courses with our easy-to-use dashboard.",
-          icon: "/3D/rocket-front-color.webp",
-        },
-        {
-          title: "Passive & Purposeful Income",
-          subtitle: "Earn as users subscribe to your courses while benefiting them spiritually.",
-          icon: "/3D/dollar-front-color.webp",
-        },
-        {
-          title: "Global Reach",
-          subtitle: "Connect with thousands of learners across the globe seeking authentic guidance.",
-          icon: "/3D/target-front-color.webp",
-        },
-        {
-          title: "AI-Powered Assistance",
+          title: "Controlled Access",
           subtitle:
-            "FarahGPT complements your courses, providing 24/7 support to students trained on authentic material.",
-          icon: "/3D/bulb-front-color.webp",
+            "Tired of reminding students not to share course materials? FarahGPT allows you to restrict access, ensuring only enrolled students benefit from your curated content.",
+          icon: "/3D/tool-front-color.webp",
+        },
+        {
+          title: "Integrated Educational Tools",
+          subtitle:
+            "Beyond AI responses, FarahGPT offers features designed specifically for educators, streamlining your teaching process.",
+          icon: "/3D/computer-front-color.webp",
+        },
+        {
+          title: "Secure Content Management",
+          subtitle:
+            "Protect your intellectual property with FarahGPT’s robust security measures, giving you peace of mind as you share your knowledge.",
+          icon: "/3D/locker-front-color.webp",
+        },
+        {
+          title: "Community-Centric Design",
+          subtitle:
+            "Built by Muslims for Muslims, FarahGPT is more than a tool, it’s a companion that understands your unique needs.",
+          icon: "/3D/roll-brush-front-color.webp",
         },
       ],
     },

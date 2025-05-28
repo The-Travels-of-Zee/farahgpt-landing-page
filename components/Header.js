@@ -83,25 +83,20 @@ function Header({ header, partners }) {
                 className="list-none flex gap-4 m-0 p-0 text-black"
               >
                 {!header.input && (
-                  <HoverCard>
-                    <HoverCardTrigger className="group px-4 py-2 my-6 rounded-full text-sm font-semibold border border-primary hover:text-muted text-primary hover:bg-primary transition flex items-center gap-2">
-                      {header.cta}
-                    </HoverCardTrigger>
-                    <HoverCardContent className="flex flex-col space-y-2 bg-white backdrop-blur-lg p-4 rounded-lg shadow-lg">
-                      <a
-                        href="/users"
-                        className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
-                      >
-                        Become User
-                      </a>
-                      <a
-                        href="/mentors"
-                        className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
-                      >
-                        Become Mentor
-                      </a>
-                    </HoverCardContent>
-                  </HoverCard>
+                  <div className="flex flex-row gap-5 my-4">
+                    <a
+                      href="/users"
+                      className="block px-4 py-2 rounded-md text-sm font-medium border border-secondary text-secondary hover:text-muted hover:bg-secondary transition"
+                    >
+                      Become User
+                    </a>
+                    <a
+                      href="/mentors"
+                      className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
+                    >
+                      Become Mentor
+                    </a>
+                  </div>
                 )}
                 {header.input && (
                   <li className="my-8 w-full max-w-md">
@@ -141,7 +136,7 @@ function Header({ header, partners }) {
             </div>
           </div>
           <div
-            className={`${containerHeight} z-[-1] ${header.screenshots.length === 1 ? "flex items-center" : ""}`}
+            className={`${containerHeight} z-[-1] mx-auto ${header.screenshots.length === 1 ? "flex items-center" : ""}`}
             ref={ref}
           >
             <div className={`${header.screenshots.length === 1 ? "" : "sticky"} top-28 md:top-40 flex justify-center`}>
