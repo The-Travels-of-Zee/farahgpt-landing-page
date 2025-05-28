@@ -5,10 +5,11 @@ import InstagramLogo from "@/public/svg/instagram";
 import FacebookLogo from "@/public/svg/facebook";
 import TwitterLogo from "@/public/svg/twitter";
 import { motion } from "@/lib/motion";
+import Link from "next/link";
 
 function Footer() {
   const {
-    footer: { links, legalLinks, socials },
+    footer: { links, legalLinks, socials, poweredBy },
   } = useContext(ConfigContext);
 
   return (
@@ -122,6 +123,16 @@ function Footer() {
               </motion.a>
             )}
           </div>
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, scale: 0.4 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ delay: 1 }}
+            className="mt-0.5 md:ml-4 md:whitespace-nowrap text-blue-100"
+          >
+            Powered by <Link href={poweredBy.link} className="font-bold text-white">{poweredBy.title}</Link>
+          </motion.p>
           <motion.p
             variants={{
               hidden: { opacity: 0, scale: 0.4 },
