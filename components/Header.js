@@ -2,12 +2,15 @@
 import { motion, useScroll } from "@/lib/motion";
 import { useRef } from "react";
 import SingleScreenshot from "@/components/SingleScreenshot";
-import SVGWave from "@/public/svg/wave";
+// import SVGWave from "@/public/svg/wave";
 import SVGBlob from "@/public/svg/blob";
 import InputEmail from "./InputEmail";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
+import { usePathname } from "next/navigation";
 
 function Header({ header, partners }) {
+  const pathname = usePathname();
+  console.log("Current Pathname:", pathname);
+
   if (!header) return null;
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -21,7 +24,7 @@ function Header({ header, partners }) {
 
   return (
     <section id={header.id} className="relative pb-8 md:pb-4">
-      <div className="max-w-screen-lg mx-auto py-12 px-4 md:py-16">
+      <div className="max-w-screen-lg mx-auto pb-12 px-4 md:py-16">
         <div className="flex flex-col md:flex-row">
           <div className={`flex flex-1 items-center md:items-start ${leftColumnHeight}`}>
             <div className="static top-40 flex flex-col prose justify-center py-8 md:sticky md:h-[548px]">
@@ -42,7 +45,7 @@ function Header({ header, partners }) {
               <motion.h2
                 initial={{ opacity: 0, rotateZ: -10 }}
                 animate={{ opacity: 1, rotateZ: 0 }}
-                className="mt-0 mb-4 text-4xl text-gray-800 md:text-7xl font-bold font-roboto"
+                className="mt-0 mb-4 text-4xl text-gray-800 md:text-6xl font-bold font-roboto"
               >
                 {header.headlineMark ? (
                   <>
@@ -83,7 +86,7 @@ function Header({ header, partners }) {
                 className="list-none flex gap-4 m-0 p-0 text-black"
               >
                 {!header.input && (
-                  <div className="flex flex-row gap-5 my-4">
+                  <li className="flex flex-row gap-5 my-4">
                     <a
                       href="/users"
                       className="block px-4 py-2 rounded-md text-sm font-medium border border-secondary text-secondary hover:text-muted hover:bg-secondary transition"
@@ -96,11 +99,23 @@ function Header({ header, partners }) {
                     >
                       Become Mentor
                     </a>
-                  </div>
+                  </li>
                 )}
                 {header.input && (
-                  <li className="my-8 w-full max-w-md">
-                    <InputEmail title="Notify Me" apiUrl="/api/newsletter" type={header.type} />
+                  <li className=" w-full max-w-md">
+                    <div className="my-8">
+                      <InputEmail title="Notify Me" apiUrl="/api/newsletter" type={header.type} />
+                      <a
+                        href={pathname === "/mentors" ? "/users" : "/mentors"}
+                        className={`block px-4 py-2 mt-4 rounded-md text-sm font-medium border hover:text-muted ${
+                          pathname === "/mentors"
+                            ? "border-primary text-primary hover:bg-primary"
+                            : "border-secondary text-secondary hover:bg-secondary"
+                        } transition max-w-max`}
+                      >
+                        Become {pathname === "/mentors" ? "User" : "Mentor"}
+                      </a>
+                    </div>
                   </li>
                 )}
               </motion.ul>
@@ -136,7 +151,9 @@ function Header({ header, partners }) {
             </div>
           </div>
           <div
-            className={`${containerHeight} z-[-1] mx-auto ${header.screenshots.length === 1 ? "flex items-center" : ""}`}
+            className={`${containerHeight} z-[-1] mx-auto ${
+              header.screenshots.length === 1 ? "flex items-center" : ""
+            }`}
             ref={ref}
           >
             <div className={`${header.screenshots.length === 1 ? "" : "sticky"} top-28 md:top-40 flex justify-center`}>

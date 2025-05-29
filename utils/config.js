@@ -199,12 +199,12 @@ const templateConfig = {
         {
           question: "How accurate are the answers?",
           answer:
-            "Answers are generated using GPT-4 Turbo AI, trained on authentic Islamic resources and verified content. However, users should always consult a trusted scholar for personal or complex issues. The AI is a tool to assist, not a replacement for scholarly advice.",
+            "Answers are generated using GPT-4 Turbo AI, fine-tuned on authentic Islamic resources and verified content. However, users should always consult a trusted scholar for personal or complex issues. The AI is a tool to assist, not a replacement for scholarly advice.",
         },
         {
           question: "Is the FarahGPT trained by real Islamic scholars?",
           answer:
-            "The responses are based on datasets compiled from reliable Islamic books, hadith, and scholarly works. However, the AI itself is not a scholar.",
+            "The responses are based on FINE-tuning the models that are already trained on datasets compiled from reliable Islamic books, hadith, and scholarly works.",
         },
         {
           question: "How does the FarahGPT ensure Islamic authenticity?",
@@ -251,7 +251,7 @@ const templateConfig = {
         {
           title: "Premium Tier",
           subtitle: "Unlimited access & Exclusive features",
-          price: "$11.99/month",
+          price: "$9.99/month",
           featured: true,
           rows: [
             "Access to all basic features",
@@ -273,7 +273,7 @@ const templateConfig = {
     header: {
       cta: "Join The Waitlist",
       headline: "Why FarahGPT? when there are already so many AI assistants?",
-      subtitle: "Learn, ask, and grow at your pace, guided by FarahGPT trained on trusted Islamic content.",
+      subtitle: "Learn, ask, and grow at your pace, guided by FarahGPT fine-tuned on trusted Islamic content.",
       screenshots: [
         // "/screenshots/user-premium.png",
         "/screenshots/explore-courses.png",
@@ -326,11 +326,11 @@ const templateConfig = {
         {
           title: "1. Sign Up with Intention",
           subtitle:
-            "Create your free account and set your niyyah (intention) to seek knowledge for the sake of Allah ﷻ.",
+            "Create your free account and set your niyyah (intention) to seek knowledge for the sake of Allahﷻ.",
           image: "/images/choose-role.webp",
         },
         {
-          title: "2. Discover Courses That Uplift",
+          title: "2. Enroll into Courses or Use FarahGPT",
           subtitle: "Browse a range of authentic courses with FarahGPT AI assisting you with learning.",
           image: "/images/browse-courses.webp",
         },
@@ -349,7 +349,7 @@ const templateConfig = {
         {
           title: "5. Grow with Barakah",
           subtitle:
-            "Track your learning. Set goals. Stay consistent. Let your efforts grow with istiqamah, and trust that Allah ﷻ sees every step.",
+            "Track your learning. Set goals. Stay consistent. Let your efforts grow with istiqamah, and trust that Allahﷻ Sees every step.",
           image: "/images/grow-consistency.webp",
         },
       ],
@@ -414,12 +414,12 @@ const templateConfig = {
       steps: [
         {
           title: "1. Sign Up",
-          subtitle: "Apply to become a mentor and get verified.",
+          subtitle: "Apply to Become a Mentor and Launch Your Online Courses.",
           image: "/svg/mentor-signup.svg",
         },
         {
           title: "2. Upload Courses",
-          subtitle: "Use our platform to design video, audio, or text-based lessons.",
+          subtitle: "Design structured Islamic courses with our easy-to-use dashboard.",
           image: "/svg/upload-courses.svg",
         },
         {

@@ -85,7 +85,7 @@ function Pricing() {
                 <div className="mt-auto w-full">
                   <a
                     href="/app"
-                    className="block bg-accent px-4 py-3 text-center text-lg text-black hover:bg-primary hover:text-muted transition-all delay-300 font-bold w-full rounded-b-2xl"
+                    className="block bg-accent px-4 py-3 text-center text-lg text-black hover:bg-primary hover:text-muted transition-all duration-300 font-bold w-full rounded-b-2xl"
                   >
                     {pricing.actionText}
                   </a>
