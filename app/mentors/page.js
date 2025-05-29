@@ -4,6 +4,7 @@ import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import Header from "@/components/Header";
 import HowItWorks from "@/components/HowItWorks";
+import MentorDashboard from "@/components/MentorDashboard";
 import VideoMockup from "@/components/VideoMockup";
 import { ConfigContext } from "@/utils/configContext";
 import { useContext } from "react";
@@ -17,6 +18,7 @@ const mentors = () => {
       <Header header={header} />
       <VideoMockup videoSrc="/videos/test-video.mp4" />
       <Features features={features} />
+      <MentorDashboard />
       <HowItWorks howItWorks={howItWorks} />
       <Faq />
       <AppBanner />

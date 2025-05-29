@@ -1,7 +1,8 @@
 import { easeIn, motion, useTransform } from "@/lib/motion";
 
 function SVGBlob({ className, scrollYProgress }) {
-  const y = useTransform(scrollYProgress, [0.85, 1], ["0%", "-30%"], {
+  // const y = useTransform(scrollYProgress, [0.85, 1], ["0%", "-30%"], {
+  const y = useTransform(scrollYProgress, [0.85, 1], ["0%", "0%"], {
     ease: easeIn,
   });
 

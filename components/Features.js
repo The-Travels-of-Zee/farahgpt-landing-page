@@ -12,7 +12,7 @@ function Features({ features }) {
         </h1>
         <motion.div
           className="h-2 bg-gradient-to-r from-primary to-secondary rounded-full overflow-hidden [--w:200px] md:[--w:350px] mb-4"
-          whileInView={{ width: "var(--w)" }}
+          whileInView={{ width: "300px" }}
           viewport={{ amount: 1, once: true, margin: "0px 0px -100px 0px" }}
         />
         {features.subtitle && (
