@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 
 function Header({ header, partners }) {
   const pathname = usePathname();
-  console.log("Current Pathname:", pathname);
 
   if (!header) return null;
   const ref = useRef(null);
@@ -19,14 +18,13 @@ function Header({ header, partners }) {
   });
 
   // Determine container height and parent height based on screenshot count
-  const containerHeight = header.screenshots.length === 1 ? "min-h-screen" : "min-h-[300vh]";
-  const leftColumnHeight = header.screenshots.length === 1 ? "h-auto" : "md:h-[300vh]";
+  const containerHeight = header.screenshots.length === 1 ? "min-h-min" : "min-h-[400vh]";
 
   return (
     <section id={header.id} className="relative pb-8 md:pb-4">
       <div className="max-w-screen-lg mx-auto pb-12 px-4 md:py-16">
-        <div className="flex flex-col md:flex-row">
-          <div className={`flex flex-1 items-center md:items-start ${leftColumnHeight}`}>
+        <div className="flex flex-col md:flex-row mt-24">
+          <div className={`flex flex-1 items-center md:items-start`}>
             <div className="static top-40 flex flex-col prose justify-center py-8 md:sticky md:h-[548px]">
               <div className="flex flex-col gap-2 my-4 3xs:flex-row">
                 {header.rewards?.map((reward, index) => (
@@ -156,10 +154,10 @@ function Header({ header, partners }) {
             }`}
             ref={ref}
           >
-            <div className={`${header.screenshots.length === 1 ? "" : "sticky"} top-28 md:top-40 flex justify-center`}>
+            <div className={`${header.screenshots.length === 1 ? "" : "sticky"} md:top-40 flex justify-center`}>
               <SVGBlob
                 scrollYProgress={scrollYProgress}
-                className="-z-10 absolute hidden w-[800px] -top-20 -right-60 md:hidden xl:block"
+                className="-z-10 absolute hidden w-[550px] -top-20 right-50 md:hidden xl:block"
               />
               <motion.div
                 initial={{ scale: 0.4, opacity: 0 }}

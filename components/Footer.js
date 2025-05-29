@@ -131,7 +131,7 @@ function Footer() {
             transition={{ delay: 1 }}
             className="mt-0.5 md:ml-4 md:whitespace-nowrap text-blue-100"
           >
-            Powered by <Link href={poweredBy.link} className="font-bold text-white">{poweredBy.title}</Link>
+            Powered by <Link href={poweredBy.link} className="font-bold hover:text-accent text-white">{poweredBy.title}</Link>
           </motion.p>
           <motion.p
             variants={{
