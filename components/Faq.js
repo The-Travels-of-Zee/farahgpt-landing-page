@@ -15,7 +15,7 @@ function Faq() {
   if (!faq) return null;
 
   return (
-    <section id={faq.id} className="max-w-screen-lg mx-auto px-4 mb-12">
+    <section id={faq.id} className="max-w-screen-lg mx-auto px-4 pt-12 mb-12">
       <div className="flex flex-col md:flex-row">
         <div className="relative flex-1 flex items-center">
           <NeonHexagon />
@@ -26,7 +26,7 @@ function Faq() {
           </div>
         </div>
         <div className="flex-1">
-          <Accordion type="single" collapsible className="w-full py-16">
+          <Accordion type="single" collapsible className="w-full py-10">
             {faq.qa.map((qa, index) => (
               <motion.div
                 key={index}

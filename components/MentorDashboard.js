@@ -34,7 +34,7 @@ const studentsData = {
 
 const MentorDashboard = () => {
   return (
-    <section className="bg-gray-50 py-16 px-6 md:px-20">
+    <section className="bg-gray-50 py-16 px-10 md:px-20">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}

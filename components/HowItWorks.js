@@ -11,7 +11,7 @@ function HowItWorks({ howItWorks }) {
   if (!howItWorks) return null;
 
   return (
-    <section id={howItWorks.id} className="overflow-hidden max-w-screen-lg mx-auto px-4 py-12">
+    <section id={howItWorks.id} className="overflow-hidden max-w-screen-lg mx-auto px-4 pb-20 md:pb-12 pt-12">
       <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
         <h1 className="mb-3">
           <AnimatedText text={howItWorks.title} />
@@ -27,7 +27,7 @@ function HowItWorks({ howItWorks }) {
           </motion.p>
         )}
       </div>
-      <div className="flex flex-col gap-52">
+      <div className="flex flex-col gap-48 md:gap-32">
         {howItWorks.steps.map((step, index) => (
           <motion.div
             key={index}
@@ -49,7 +49,7 @@ function HowItWorks({ howItWorks }) {
                     visible: { scale: 1, translateX: "-50%" },
                   }}
                   transition={{ stiffness: 150, type: "tween" }}
-                  className="hidden w-48 absolute -bottom-44 left-1/2 md:block"
+                  className="hidden w-32 absolute -bottom-30 left-1/2 md:block"
                 >
                   {index % 2 === 0 ? <SwirlArrowBottomLeft /> : <SwirlArrowBottomRight />}
                 </motion.div>
@@ -62,7 +62,7 @@ function HowItWorks({ howItWorks }) {
                     visible: { scale: 1, translateX: "-50%" },
                   }}
                   transition={{ stiffness: 150, type: "tween" }}
-                  className="w-16 absolute -bottom-48 left-1/2 md:hidden md:-bottom-36"
+                  className="w-12 absolute -bottom-38 left-1/2 md:hidden"
                 >
                   <SwirlArrowBottom />
                 </motion.div>
@@ -75,7 +75,7 @@ function HowItWorks({ howItWorks }) {
               }}
               className="mb-8 flex flex-col text-center justify-center prose flex-1"
             >
-              <div className="pb-0 font-amiri text-8xl text-primary">
+              <div className="pb-0 font-amiri text-6xl md:text-8xl text-primary">
                 {index < 10 && 0}
                 {index + 1}
               </div>
@@ -89,7 +89,7 @@ function HowItWorks({ howItWorks }) {
               }}
               className="flex-1 flex justify-center"
             >
-              <img className="rounded-3xl lg:w-[75%] h-[300px] object-cover" src={step.image} alt={`step ${index}`} />
+              <img className="rounded-3xl lg:w-[70%] h-[240px] object-cover" src={step.image} alt={`step ${index}`} />
             </motion.div>
           </motion.div>
         ))}

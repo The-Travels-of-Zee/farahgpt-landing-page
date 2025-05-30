@@ -60,10 +60,10 @@ function Pricing() {
                       Best Price
                     </div>
                   )}
-                  <div className={clsx("h-32 w-[40%] p-4", planBGs[index])}>
+                  <div className={clsx("h-24 w-[30%] p-4", planBGs[index])}>
                     <img src={planImages[index]} alt="pricing plan" className="m-0 h-full w-full object-contain" />
                   </div>
-                  <div className="mt-8 flex-1 font-bold text-left ml-4 font-roboto text-gray-800">
+                  <div className="mt-8 flex-1 font-bold text-left ml-8 font-roboto text-gray-800">
                     <h4 className="text-xl my-1">{plan.title}</h4>
                     <p className="my-1">{plan.price}</p>
                   </div>

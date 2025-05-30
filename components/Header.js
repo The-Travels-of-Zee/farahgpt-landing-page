@@ -126,7 +126,7 @@ function Header({ header, partners }) {
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ delay: 0.3 + index * 0.2 }}
-                        className="w-8 h-8 rounded-full border-2 overflow-hidden"
+                        className="w-8 h-8 rounded-full border-2 border-white overflow-hidden"
                       >
                         <img
                           src={`/avatars/${index + 1}.webp`}
@@ -157,7 +157,7 @@ function Header({ header, partners }) {
             <div className={`${header.screenshots.length === 1 ? "" : "sticky"} md:top-40 flex justify-center`}>
               <SVGBlob
                 scrollYProgress={scrollYProgress}
-                className="-z-10 absolute hidden w-[550px] -top-20 right-50 md:hidden xl:block"
+                className="-z-10 absolute hidden w-[500px] -top-20 md:block"
               />
               <motion.div
                 initial={{ scale: 0.4, opacity: 0 }}

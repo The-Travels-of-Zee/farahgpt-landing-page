@@ -324,30 +324,30 @@ const templateConfig = {
         "Begin your journey of knowledge with clarity and sincerity. Here's how to get started as a student of deen.",
       steps: [
         {
-          title: "1. Sign Up with Intention",
+          title: "Sign Up with Intention",
           subtitle:
             "Create your free account and set your niyyah (intention) to seek knowledge for the sake of Allahﷻ.",
           image: "/images/choose-role.webp",
         },
         {
-          title: "2. Enroll into Courses or Use FarahGPT",
+          title: "Enroll into Courses or Use FarahGPT",
           subtitle: "Browse a range of authentic courses with FarahGPT AI assisting you with learning.",
           image: "/images/browse-courses.webp",
         },
         {
-          title: "3. Learn at Your Own Pace",
+          title: "Learn at Your Own Pace",
           subtitle:
             "Access lessons anytime. Watch videos, read materials, and revisit recordings, on your own time, with full flexibility.",
           image: "/images/learn-at-your-pace.webp",
         },
         {
-          title: "4. Ask & Reflect with FarahGPT",
+          title: "Ask & Reflect with FarahGPT",
           subtitle:
             "Have questions? FarahGPT is here to help with answers grounded in authentic Islamic sources, 24/7 support, just a message away.",
           image: "/images/farahgpt-help.webp",
         },
         {
-          title: "5. Grow with Barakah",
+          title: "Grow with Barakah",
           subtitle:
             "Track your learning. Set goals. Stay consistent. Let your efforts grow with istiqamah, and trust that Allahﷻ Sees every step.",
           image: "/images/grow-consistency.webp",
@@ -413,17 +413,17 @@ const templateConfig = {
       title: "How It Works",
       steps: [
         {
-          title: "1. Sign Up",
+          title: "Sign Up",
           subtitle: "Apply to Become a Mentor and Launch Your Online Courses.",
           image: "/svg/mentor-signup.svg",
         },
         {
-          title: "2. Upload Courses",
+          title: "Upload Courses",
           subtitle: "Design structured Islamic courses with our easy-to-use dashboard.",
           image: "/svg/upload-courses.svg",
         },
         {
-          title: "3. Earn & Engage",
+          title: "Earn & Engage",
           subtitle: "Earn revenue and help students progress in their deen.",
           image: "/images/mentor-earn.webp",
         },
