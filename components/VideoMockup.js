@@ -34,7 +34,7 @@ export default function VideoMockup({ videoSrc }) {
       >
         {/* Video should sit behind the phone frame */}
         <IPhoneVideoFrame
-          src={<video src={videoSrc} autoPlay muted loop playsInline className="w-full h-full object-cover" />}
+          src={<video src={videoSrc} autoPlay muted loop playsInline className="mx-auto left-1 mt-3 h-[97%]" />}
         />
       </motion.div>
     </section>

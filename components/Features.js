@@ -5,7 +5,7 @@ import { motion } from "@/lib/motion";
 function Features({ features }) {
   if (!features) return null;
   return (
-    <section id={features.id} className="max-w-screen-lg mx-auto px-4 py-12">
+    <section id={features.id} className="max-w-screen-md mx-auto px-4 py-12">
       <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
         <h1 className="mb-3">
           <AnimatedText text={features.title} />
@@ -52,7 +52,7 @@ function Features({ features }) {
                 <img
                   src={feat.icon}
                   alt="feature icon"
-                  className="w-40 mx-auto transition-transform group-hover:scale-90"
+                  className="w-30 mx-auto transition-transform group-hover:scale-90"
                 />
               </figure>
             </div>
