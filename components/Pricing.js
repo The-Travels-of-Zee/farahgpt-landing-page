@@ -17,7 +17,7 @@ function Pricing() {
 
   return (
     <section id={pricing.id} className="overflow-hidden max-w-screen-lg mx-auto px-4 py-12">
-      <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
+      <div className="my-8 md:my-14 max-w-none flex flex-col items-center prose prose-lg text-center">
         <h1 className="mb-0 font-roboto">
           <AnimatedText text={pricing.title} />
         </h1>

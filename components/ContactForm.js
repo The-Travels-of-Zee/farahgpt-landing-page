@@ -105,7 +105,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact-us" className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
+    <section id="contact-us" className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center px-4 py-12">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -117,13 +117,13 @@ export default function ContactForm() {
         viewport={{ once: true }}
         className=" w-full max-w-2xl"
       >
-        <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-white/20">
+        <div className="bg-white/90 backdrop-blur-sm px-4 py-8 md:p-8 rounded-2xl shadow-2xl border border-white/20">
           {/* Header */}
           <div className="text-center mb-8">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               Ask Us A Question
             </div>
-            <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-primary/70 to-secondary/70 bg-clip-text text-transparent">
+            <h1 className="text-2xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary/70 to-secondary/70 bg-clip-text text-transparent">
               We're Here To Help You
             </h1>
             <p className="text-gray-600 text-lg">Share your thoughts and Help us improve FarahGPT</p>

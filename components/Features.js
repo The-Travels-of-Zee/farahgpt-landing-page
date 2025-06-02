@@ -6,8 +6,8 @@ function Features({ features }) {
   if (!features) return null;
   return (
     <section id={features.id} className="max-w-screen-md mx-auto px-4 py-12">
-      <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
-        <h1 className="mb-3 font-roboto leading-16">
+      <div className="my-8 md:my-12 max-w-none flex flex-col items-center prose prose-lg text-center">
+        <h1 className="mb-3 font-roboto leading-none md:leading-16">
           <AnimatedText text={features.title} />
         </h1>
         <motion.div
@@ -40,7 +40,7 @@ function Features({ features }) {
               visible: { x: 0, opacity: 1 },
             }}
             transition={{ delay: 0.25 + index * 0.25 }}
-            className={clsx("shadow-md border-primary/10 border-2 card relative overflow-hidden group pb-4 px-12", {
+            className={clsx("shadow-md shadow-primary/10 hover:bg-primary/5 border-primary/10 border-2 card relative overflow-hidden group pb-4 px-12", {
               "col-span-2": index === features.cards.length - 1 && features.cards.length % 2 === 1,
             })}
           >
@@ -52,7 +52,7 @@ function Features({ features }) {
                 <img
                   src={feat.icon}
                   alt="feature icon"
-                  className="w-30 mx-auto transition-transform group-hover:scale-90"
+                  className="w-20 md:w-30 mx-auto transition-transform group-hover:scale-90"
                 />
               </figure>
             </div>
