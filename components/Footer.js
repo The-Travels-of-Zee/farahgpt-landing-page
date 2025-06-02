@@ -122,17 +122,20 @@ function Footer() {
                 Cookies policy
               </motion.a>
             )}
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, scale: 0.4 },
+                visible: { opacity: 1, scale: 1 },
+              }}
+              transition={{ delay: 1 }}
+              className="mt-0.5 md:ml-4 md:whitespace-nowrap text-blue-100"
+            >
+              Powered by{" "}
+              <Link href={poweredBy.link} className="font-bold hover:text-accent text-white">
+                {poweredBy.title}
+              </Link>
+            </motion.p>
           </div>
-          <motion.p
-            variants={{
-              hidden: { opacity: 0, scale: 0.4 },
-              visible: { opacity: 1, scale: 1 },
-            }}
-            transition={{ delay: 1 }}
-            className="mt-0.5 md:ml-4 md:whitespace-nowrap text-blue-100"
-          >
-            Powered by <Link href={poweredBy.link} className="font-bold hover:text-accent text-white">{poweredBy.title}</Link>
-          </motion.p>
           <motion.p
             variants={{
               hidden: { opacity: 0, scale: 0.4 },
