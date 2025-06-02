@@ -34,6 +34,7 @@ const templateConfig = {
       { href: "/#how-it-works", title: "How it works" },
       // { href: "/#pricing", title: "Pricing" },
       { href: "/#faq", title: "FAQ" },
+      { href: "/#contact-us", title: "Contact Us" },
     ],
   },
   topNavbar: {
@@ -55,9 +56,9 @@ const templateConfig = {
     subtitle:
       "Unlock the full potential of our services with seamless access at your fingertips. Stay connected, informed, and in control wherever you are.",
     screenshots: [
-      "/screenshots/seller-courses.png",
-      "/screenshots/explore-courses.png",
-      "/screenshots/farahgpt-course.png",
+      "/screenshots/explore-courses.webp",
+      "/screenshots/seller-courses.webp",
+      "/screenshots/farahgpt-course.webp",
     ],
   },
   home: {
@@ -228,9 +229,9 @@ const templateConfig = {
       headline: "FarahGPT - AI Islamic Assistant. For Muslims, by Muslims.",
       subtitle: "Join a growing ummah of students and mentors united by the light of Islamic knowledge.",
       screenshots: [
-        // "/screenshots/seller-courses.png",
-        "/screenshots/farahgpt-course.png",
-        // "/screenshots/explore-courses.png",
+        // "/screenshots/seller-courses.webp",
+        // "/screenshots/farahgpt-course.webp",
+        "/screenshots/explore-courses.webp",
       ],
       rewards: ["إن شاءالله"],
       usersDescription: "2,000+ people already in the waiting list",
@@ -240,7 +241,7 @@ const templateConfig = {
       id: "pricing",
       title: "Choose Your Plan",
       subtitle: "Unlock premium features for a better experience",
-      actionText: "Download the app",
+      actionText: "We Will Notify You",
       plans: [
         {
           title: "Basic Tier",
@@ -275,9 +276,9 @@ const templateConfig = {
       headline: "Why FarahGPT? Because it’s crafted with your values at its core.",
       subtitle: "Learn, ask, and grow at your pace, guided by FarahGPT fine-tuned on trusted Islamic content.",
       screenshots: [
-        // "/screenshots/user-premium.png",
-        "/screenshots/explore-courses.png",
-        // "/screenshots/create-user-account.png",
+        // "/screenshots/user-premium.webp",
+        "/screenshots/explore-courses.webp",
+        // "/screenshots/create-user-account.webp",
       ],
       rewards: ["إن شاءالله"],
       usersDescription: "2,000+ people already in the waiting list",
@@ -366,9 +367,9 @@ const templateConfig = {
       subtitle:
         "Security for Instructors sharing their course content with GPTs. Fine-tuned model according to Islamic instructions.",
       screenshots: [
-        // "/screenshots/seller-settings-page.png",
-        "/screenshots/seller-courses.png",
-        // "/screenshots/create-seller-account.png",
+        // "/screenshots/seller-settings-page.webp",
+        "/screenshots/seller-courses.webp",
+        // "/screenshots/create-seller-account.webp",
       ],
       rewards: ["إن شاءالله"],
       usersDescription: "Join a growing network of trusted Islamic educators",
