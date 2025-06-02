@@ -2,12 +2,13 @@
 
 import AnimatedList from "@/components/AnimatedList";
 import MenuToggle from "@/components/MenuToggle";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+// import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { ConfigContext } from "@/utils/configContext";
 import { motion } from "@/lib/motion";
 import { useContext, useState } from "react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import { ChevronDownIcon } from "lucide-react";
+import Link from "next/link";
 
 function Navbar() {
   const { name, showThemeSwitch, topNavbar, theme } = useContext(ConfigContext);
@@ -19,21 +20,21 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 md:py-4">
         {/* Logo / Title */}
         <div className="flex items-center space-x-2">
-          <a
+          <Link
             href="/"
             className="text-2xl md:text-3xl font-bold font-roboto text-(--dark)/80 hover:text-primary transition"
           >
             <img src="./favicon/favicon.svg" width={48} height={48} alt="farahgpt-logo" className="inline mr-2" />
             {name}
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 text-lg">
           {topNavbar.links.map(({ title, href }, index) => (
-            <a key={index} href={href} className="transition text-(--dark) hover:text-primary">
+            <Link key={index} href={href} className="transition text-(--dark) hover:text-primary">
               {title}
-            </a>
+            </Link>
           ))}
           {topNavbar.cta && (
             <HoverCard>
@@ -42,18 +43,18 @@ function Navbar() {
                 <ChevronDownIcon className="size-5 transition-transform duration-200 group-hover:rotate-180" />
               </HoverCardTrigger>
               <HoverCardContent className="flex flex-col space-y-2 bg-(--dark)/5 backdrop-blur-lg p-4 rounded-lg shadow-lg">
-                <a
+                <Link
                   href="/users"
                   className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
                 >
                   Become User
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/mentors"
                   className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
                 >
                   Become Mentor
-                </a>
+                </Link>
               </HoverCardContent>
             </HoverCard>
           )}
@@ -89,18 +90,18 @@ function Navbar() {
         ))}
         {topNavbar.cta && (
           <>
-            <a
+            <Link
               href="/users"
               className="mt-4 text-center px-4 py-2 rounded-full text-sm font-semibold border border-white text-white hover:bg-primary hover:text-white transition"
             >
               Become User
-            </a>
-            <a
+            </Link>
+            <Link
               href="/mentors"
               className="mt-2 text-center px-4 py-2 rounded-full text-sm font-semibold border border-white text-white hover:bg-primary hover:text-white transition"
             >
               Become Mentor
-            </a>
+            </Link>
           </>
         )}
       </AnimatedList>

@@ -7,7 +7,7 @@ function Features({ features }) {
   return (
     <section id={features.id} className="max-w-screen-md mx-auto px-4 py-12">
       <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
-        <h1 className="mb-3">
+        <h1 className="mb-3 font-roboto leading-16">
           <AnimatedText text={features.title} />
         </h1>
         <motion.div

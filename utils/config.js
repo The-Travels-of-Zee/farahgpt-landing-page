@@ -37,7 +37,7 @@ const templateConfig = {
     ],
   },
   topNavbar: {
-    cta: "Join The Waitlist",
+    cta: "Join for Free",
     disableWidthAnimation: false,
     hideAppStore: false,
     hideGooglePlay: false,
@@ -254,7 +254,7 @@ const templateConfig = {
           price: "$9.99/month",
           featured: true,
           rows: [
-            "Access to all basic features",
+            "Access to all Basic Tier features",
             "Unlimited queries",
             "Pin courses to chat",
             "Priority responses",

@@ -4,6 +4,7 @@ import Spill from "@/public/svg/spill";
 import IPhoneFrame from "@/components/IPhoneFrame";
 import { motion } from "@/lib/motion";
 import clsx from "clsx";
+import Link from "next/link";
 
 function AppBanner() {
   const { googlePlayLink, appStoreLink, appBanner } = useContext(ConfigContext);
@@ -40,7 +41,7 @@ function AppBanner() {
               initial={{ opacity: 0, y: "-100%" }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="mt-0 mb-4 text-4xl md:text-6xl"
+              className="mt-0 mb-4 text-4xl md:text-6xl font-roboto"
             >
               {appBanner.title}
             </motion.h2>
@@ -60,16 +61,16 @@ function AppBanner() {
             >
               {googlePlayLink && (
                 <li className="m-0 p-0">
-                  <a href={googlePlayLink}>
+                  <Link href={googlePlayLink} target="_blank" rel="noopener noreferrer">
                     <img className="h-14" alt="google play logo" src="/stores/google-play.svg" />
-                  </a>
+                  </Link>
                 </li>
               )}
               {appStoreLink && (
                 <li className="m-0 p-0">
-                  <a href={appStoreLink}>
+                  <Link href={appStoreLink} target="_blank" rel="noopener noreferrer">
                     <img className="h-14" alt="app store logo" src="/stores/app-store.svg" />
-                  </a>
+                  </Link>
                 </li>
               )}
             </motion.ul>

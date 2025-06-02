@@ -9,6 +9,7 @@ import Features from "@/components/Features";
 import AppBanner from "@/components/AppBanner";
 import Pricing from "@/components/Pricing";
 import VideoMockup from "@/components/VideoMockup";
+import ContactForm from "@/components/ContactForm";
 
 const Main = () => {
   const {
@@ -25,6 +26,7 @@ const Main = () => {
         <HowItWorks howItWorks={howItWorks} />
         <Pricing />
         <Faq />
+        <ContactForm />
         <AppBanner />
       </main>
     </ConfigContext.Provider>
