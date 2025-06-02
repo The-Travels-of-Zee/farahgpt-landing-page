@@ -16,6 +16,11 @@ function HowItWorks({ howItWorks }) {
         <h1 className="mb-3 font-roboto">
           <AnimatedText text={howItWorks.title} />
         </h1>
+        <motion.div
+          className="h-2 bg-gradient-to-r from-primary to-secondary rounded-full overflow-hidden [--w:200px] md:[--w:350px] mb-4"
+          whileInView={{ width: "300px" }}
+          viewport={{ amount: 1, once: true, margin: "0px 0px -100px 0px" }}
+        />
         {howItWorks.subtitle && (
           <motion.p
             initial={{ y: "100%", opacity: 0 }}
@@ -27,7 +32,7 @@ function HowItWorks({ howItWorks }) {
           </motion.p>
         )}
       </div>
-      <div className="flex flex-col gap-48 md:gap-32">
+      <div className="flex flex-col gap-38 md:gap-32">
         {howItWorks.steps.map((step, index) => (
           <motion.div
             key={index}
@@ -62,7 +67,7 @@ function HowItWorks({ howItWorks }) {
                     visible: { scale: 1, translateX: "-50%" },
                   }}
                   transition={{ stiffness: 150, type: "tween" }}
-                  className="w-12 absolute -bottom-38 left-1/2 md:hidden"
+                  className="w-10 absolute -bottom-32 left-1/2 md:hidden"
                 >
                   <SwirlArrowBottom />
                 </motion.div>
@@ -89,7 +94,7 @@ function HowItWorks({ howItWorks }) {
               }}
               className="flex-1 flex justify-center"
             >
-              <img className="rounded-3xl lg:w-[70%] h-[240px] object-cover" src={step.image} alt={`step ${index}`} />
+              <img className="rounded-3xl w-[70%] h-[240px] object-cover" src={step.image} alt={`step ${index}`} />
             </motion.div>
           </motion.div>
         ))}

@@ -8,9 +8,14 @@ export default function VideoMockup({ videoSrc }) {
   return (
     <section className="overflow-hidden max-w-screen-lg mx-auto px-4 pb-12 pt-4 md:pt-12">
       <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
-        <h1 className="mb-0 font-roboto">
+        <h1 className="mb-3 font-roboto">
           <AnimatedText text="Watch the demo" />
         </h1>
+        <motion.div
+          className="h-2 bg-gradient-to-r from-primary to-secondary rounded-full overflow-hidden [--w:200px] md:[--w:350px] mb-4"
+          whileInView={{ width: "300px" }}
+          viewport={{ amount: 1, once: true, margin: "0px 0px -100px 0px" }}
+        />
         <motion.p
           initial={{ y: "100%", opacity: 0 }}
           whileInView={{ y: "0%", opacity: 0.7 }}
