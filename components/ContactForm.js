@@ -105,7 +105,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
+    <section id="contact-us" className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
       <motion.div
         initial="hidden"
         whileInView="visible"

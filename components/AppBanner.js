@@ -60,19 +60,22 @@ function AppBanner() {
               className="list-none flex gap-4 my-6 p-0 w-full"
             >
               {googlePlayLink && (
-                <li className="m-0 p-0">
+                <li className="m-0 p-0 pointer-events-none">
                   <Link href={googlePlayLink} target="_blank" rel="noopener noreferrer">
                     <img className="h-14" alt="google play logo" src="/stores/google-play.svg" />
                   </Link>
                 </li>
               )}
               {appStoreLink && (
-                <li className="m-0 p-0">
+                <li className="m-0 p-0 pointer-events-none">
                   <Link href={appStoreLink} target="_blank" rel="noopener noreferrer">
                     <img className="h-14" alt="app store logo" src="/stores/app-store.svg" />
                   </Link>
                 </li>
               )}
+              <li className="m-0 p-0">
+                <p>We Will Notify You As We Launch</p>
+              </li>
             </motion.ul>
           </div>
           <motion.div

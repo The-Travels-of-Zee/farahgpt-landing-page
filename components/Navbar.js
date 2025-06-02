@@ -42,7 +42,7 @@ function Navbar() {
                 {topNavbar.cta}
                 <ChevronDownIcon className="size-5 transition-transform duration-200 group-hover:rotate-180" />
               </HoverCardTrigger>
-              <HoverCardContent className="flex flex-col space-y-2 bg-(--dark)/5 backdrop-blur-lg p-4 rounded-lg shadow-lg">
+              <HoverCardContent className="flex flex-col space-y-2 bg-white/75 backdrop-blur-lg p-4 rounded-lg shadow-lg">
                 <Link
                   href="/users"
                   className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
@@ -84,6 +84,13 @@ function Navbar() {
               show: { x: 120, opacity: 1 },
               hidden: { x: "-100%", opacity: 0 },
             }}
+            onClick={() => setIsMobileNavVisible(false)}
+            transition={{
+              delay: index * 0.1,
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+            }}
           >
             {title}
           </motion.a>
@@ -93,12 +100,26 @@ function Navbar() {
             <Link
               href="/users"
               className="mt-4 text-center px-4 py-2 rounded-full text-sm font-semibold border border-white text-white hover:bg-primary hover:text-white transition"
+              onClick={() => setIsMobileNavVisible(false)}
+              transition={{
+                delay: 0.1,
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              }}
             >
               Become User
             </Link>
             <Link
               href="/mentors"
               className="mt-2 text-center px-4 py-2 rounded-full text-sm font-semibold border border-white text-white hover:bg-primary hover:text-white transition"
+              onClick={() => setIsMobileNavVisible(false)}
+              transition={{
+                delay: 0.1,
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              }}
             >
               Become Mentor
             </Link>

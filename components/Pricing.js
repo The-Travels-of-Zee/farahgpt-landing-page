@@ -74,8 +74,16 @@ function Pricing() {
                   {plan.rows.map((row, index) => (
                     <div key={index} className="flex relative items-center">
                       <span className="relative flex h-3 w-3 mx-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                        <span
+                          className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${
+                            plan.featured ? "bg-accent" : "bg-sky-400 "
+                          }`}
+                        ></span>
+                        <span
+                          className={`relative inline-flex rounded-full h-3 w-3 ${
+                            plan.featured ? "bg-accent/90" : "bg-sky-500 "
+                          }`}
+                        ></span>
                       </span>
                       <p className="flex-1 text-gray-800 text-left font-roboto my-2">{row}</p>
                     </div>
@@ -85,7 +93,7 @@ function Pricing() {
               {pricing.actionText && (
                 <div className="mt-auto w-full">
                   <Link
-                    href="/app"
+                    href="#"
                     className="block bg-accent px-4 py-3 text-center text-lg text-black hover:bg-primary hover:text-muted transition-all duration-300 font-bold w-full rounded-b-2xl"
                   >
                     {pricing.actionText}
