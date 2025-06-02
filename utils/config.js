@@ -28,6 +28,8 @@ const templateConfig = {
       instagram: "https://instagram.com/google",
       facebook: "https://facebook.com/google",
       twitter: "https://x.com/google",
+      upwork: "https://www.upwork.com/agencies/1900660843112486960/",
+      linkedin: "https://www.linkedin.com/company/the-travels-of-zee/people/",
     },
     links: [
       { href: "/#features", title: "Features" },
@@ -492,7 +494,7 @@ If you have any questions or concerns about this Privacy Policy, please contact 
 
 FarahGPT
 
-📧 [support@farahgpt.com](mailto:support@farahgpt.com)  
+📧 [info@thetravelsofzee.com](mailto:info@thetravelsofzee.com)  
 🕌 With sincerity and responsibility,  
 **Team Farah**
 
