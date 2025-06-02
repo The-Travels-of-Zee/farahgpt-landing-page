@@ -16,8 +16,8 @@ const mentors = () => {
   return (
     <div>
       <Header header={header} />
-      <VideoMockup videoSrc="/videos/test-video.mp4" />
       <Features features={features} />
+      <VideoMockup videoSrc="/videos/test-video.webm" />
       <MentorDashboard />
       <HowItWorks howItWorks={howItWorks} />
       <Faq />

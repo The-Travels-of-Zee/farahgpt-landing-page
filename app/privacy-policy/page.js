@@ -11,8 +11,10 @@ function PrivacyPolicy() {
 
   return (
     <main>
-      <section className="max-w-screen-lg mx-auto py-4 px-4 mt-8 md:py-16">
-        <Markdown className="prose text-xl">{content}</Markdown>
+      <section className="max-w-screen-lg mx-auto px-4 my-24">
+        <article className="prose prose-sm md:prose-lg">
+          <Markdown>{content}</Markdown>
+        </article>
       </section>
     </main>
   );

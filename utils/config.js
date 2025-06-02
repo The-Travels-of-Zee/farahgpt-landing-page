@@ -56,8 +56,8 @@ const templateConfig = {
       "Unlock the full potential of our services with seamless access at your fingertips. Stay connected, informed, and in control wherever you are.",
     screenshots: [
       "/screenshots/seller-courses.png",
-      "/screenshots/farahgpt-course.png",
       "/screenshots/explore-courses.png",
+      "/screenshots/farahgpt-course.png",
     ],
   },
   home: {
@@ -178,7 +178,7 @@ const templateConfig = {
           title: "Community-Centric Design",
           subtitle:
             "Built by Muslims for Muslims, FarahGPT is more than a tool, it’s a companion that understands your unique needs.",
-          icon: "/3D/roll-brush-front-color.webp",
+          icon: "/3D/notify-heart-front-color.webp",
         },
       ],
     },
@@ -272,7 +272,7 @@ const templateConfig = {
     },
     header: {
       cta: "Join The Waitlist",
-      headline: "Why FarahGPT? when there are already so many AI assistants?",
+      headline: "Why FarahGPT? Because it’s crafted with your values at its core.",
       subtitle: "Learn, ask, and grow at your pace, guided by FarahGPT fine-tuned on trusted Islamic content.",
       screenshots: [
         // "/screenshots/user-premium.png",
@@ -287,7 +287,7 @@ const templateConfig = {
     },
     features: {
       id: "features",
-      title: "Why FarahGPT? Because it’s crafted with your values at its core.",
+      title: "When there are already so many AI assistants then why use FarahGPT?",
       subtitle:
         "In a digital world brimming with AI assistants, FarahGPT stands out by aligning technology with Islamic principles. It’s not just about providing answers; it’s about ensuring those answers resonate with your faith and lifestyle.",
       cards: [
@@ -313,7 +313,7 @@ const templateConfig = {
           title: "Community-Centric Design",
           subtitle:
             "Built by Muslims for Muslims, FarahGPT is more than a tool, it’s a companion that understands your unique needs.",
-          icon: "/3D/roll-brush-front-color.webp",
+          icon: "/3D/notify-heart-front-color.webp",
         },
       ],
     },
@@ -362,7 +362,7 @@ const templateConfig = {
     },
     header: {
       cta: "Become a Mentor",
-      headline: "Why not just use a customGPT on any other AI platform for your course?",
+      headline: "Why not just use a custom GPT for your course?",
       subtitle:
         "Security for Instructors sharing their course content with GPTs. Fine-tuned model according to Islamic instructions.",
       screenshots: [
@@ -372,15 +372,15 @@ const templateConfig = {
       ],
       rewards: ["إن شاءالله"],
       usersDescription: "Join a growing network of trusted Islamic educators",
-      // headlineMark: [4, 6],
+      headlineMark: [4, 7],
       input: true,
       type: "mentors",
     },
     features: {
       id: "features",
-      title: "Why not just use a custom GPT for your course?",
+      title: "Elevate your teaching with FarahGPT’s tailored solutions.",
       subtitle:
-        "Elevate your teaching with FarahGPT’s tailored solutions. While custom GPTs offer a degree of personalization, they often fall short in providing the control and exclusivity educators require.",
+        "While custom GPTs offer a degree of personalization, they often fall short in providing the control and exclusivity educators require.",
       cards: [
         {
           title: "Controlled Access",
@@ -404,7 +404,7 @@ const templateConfig = {
           title: "Community-Centric Design",
           subtitle:
             "Built by Muslims for Muslims, FarahGPT is more than a tool, it’s a companion that understands your unique needs.",
-          icon: "/3D/roll-brush-front-color.webp",
+          icon: "/3D/notify-heart-front-color.webp",
         },
       ],
     },
