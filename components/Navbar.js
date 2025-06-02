@@ -19,7 +19,7 @@ function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md shadow-md transition-all">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 md:py-4">
         {/* Logo / Title */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center">
           <Link
             href="/"
             className="text-2xl md:text-3xl font-bold font-roboto text-(--dark)/80 hover:text-primary transition"

@@ -22,9 +22,9 @@ function Header({ header, partners }) {
   const containerHeight = header.screenshots.length === 1 ? "min-h-min" : "min-h-[400vh]";
 
   return (
-    <section id={header.id} className="relative pb-8 md:pb-4">
-      <div className="max-w-screen-lg mx-auto pb-12 px-4 md:py-16">
-        <div className="flex flex-col md:flex-row mt-24">
+    <section id={header.id} className="relative">
+      <div className="max-w-screen-lg mx-auto pb-0 px-4 md:py-16">
+        <div className="flex flex-col md:flex-row mt-12 md:mt-24">
           <div className={`flex flex-1 items-center md:items-start`}>
             <div className="static top-40 flex flex-col justify-center py-8 md:sticky md:h-[548px]">
               <div className="flex flex-col gap-2 my-4 3xs:flex-row">

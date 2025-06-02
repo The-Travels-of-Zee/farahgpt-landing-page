@@ -15,8 +15,8 @@ function Faq() {
   if (!faq) return null;
 
   return (
-    <section id={faq.id} className="max-w-screen-lg mx-auto px-4 py-12">
-      <div className="flex flex-col md:flex-row">
+    <section id={faq.id} className="max-w-screen-lg mx-auto px-4 py-8">
+      <div className="mt-16 my-0 md:my-8 flex flex-col md:flex-row">
         <div className="relative flex-1 flex items-center">
           <NeonHexagon />
           <div className="h-full w-full flex items-center justify-center">
