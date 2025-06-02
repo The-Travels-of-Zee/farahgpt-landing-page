@@ -8,7 +8,7 @@ export default function VideoMockup({ videoSrc }) {
   return (
     <section className="overflow-hidden max-w-screen-lg mx-auto px-4 pb-12 pt-4 md:pt-12">
       <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
-        <h1 className="mb-0">
+        <h1 className="mb-0 font-roboto">
           <AnimatedText text="Watch the demo" />
         </h1>
         <motion.p

@@ -1,5 +1,5 @@
 import React from "react";
-import { DollarSign, Users, BookOpen, Trash2, PlusCircle, BarChart2, UserX2, BookPlus } from "lucide-react";
+import { DollarSign, Users, BookOpen, Trash2, BarChart2, UserX2, BookPlus } from "lucide-react";
 import { motion } from "@/lib/motion";
 import { Bar, Line } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Tooltip } from "chart.js";
@@ -40,7 +40,7 @@ const MentorDashboard = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-6 text-center"
+          className="mb-6 text-center font-roboto"
         >
           <AnimatedText text={"Mentor Dashboard"} />
         </motion.h2>

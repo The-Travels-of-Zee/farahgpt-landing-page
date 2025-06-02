@@ -1,5 +1,6 @@
 "use client";
 import AppBanner from "@/components/AppBanner";
+import ContactForm from "@/components/ContactForm";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import Header from "@/components/Header";
@@ -21,6 +22,7 @@ const Users = () => {
       <HowItWorks howItWorks={howItWorks} />
       <Pricing />
       <Faq />
+      <ContactForm />
       <AppBanner />
     </div>
   );

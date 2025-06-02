@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { motion } from "@/lib/motion";
 import { useContext } from "react";
 import { ConfigContext } from "@/utils/configContext";
+import Link from "next/link";
 
 const planImages = ["/misc/wallet-front-color.webp", "/misc/money-front-color.webp", "/misc/locker-front-color.webp"];
 
@@ -17,7 +18,7 @@ function Pricing() {
   return (
     <section id={pricing.id} className="overflow-hidden max-w-screen-lg mx-auto px-4 py-12">
       <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
-        <h1 className="mb-0">
+        <h1 className="mb-0 font-roboto">
           <AnimatedText text={pricing.title} />
         </h1>
         <motion.p
@@ -83,12 +84,12 @@ function Pricing() {
               </div>
               {pricing.actionText && (
                 <div className="mt-auto w-full">
-                  <a
+                  <Link
                     href="/app"
                     className="block bg-accent px-4 py-3 text-center text-lg text-black hover:bg-primary hover:text-muted transition-all duration-300 font-bold w-full rounded-b-2xl"
                   >
                     {pricing.actionText}
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>

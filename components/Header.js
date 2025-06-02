@@ -6,6 +6,7 @@ import SingleScreenshot from "@/components/SingleScreenshot";
 import SVGBlob from "@/public/svg/blob";
 import InputEmail from "./InputEmail";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 function Header({ header, partners }) {
   const pathname = usePathname();
@@ -25,7 +26,7 @@ function Header({ header, partners }) {
       <div className="max-w-screen-lg mx-auto pb-12 px-4 md:py-16">
         <div className="flex flex-col md:flex-row mt-24">
           <div className={`flex flex-1 items-center md:items-start`}>
-            <div className="static top-40 flex flex-col prose justify-center py-8 md:sticky md:h-[548px]">
+            <div className="static top-40 flex flex-col justify-center py-8 md:sticky md:h-[548px]">
               <div className="flex flex-col gap-2 my-4 3xs:flex-row">
                 {header.rewards?.map((reward, index) => (
                   <motion.div
@@ -85,34 +86,34 @@ function Header({ header, partners }) {
               >
                 {!header.input && (
                   <li className="flex flex-row gap-5 my-4">
-                    <a
+                    <Link
                       href="/users"
-                      className="block px-4 py-2 rounded-md text-sm font-medium border border-secondary text-secondary hover:text-muted hover:bg-secondary transition"
+                      className="block px-4 py-2 rounded-md text-sm font-medium border no-underline text-muted border-secondary bg-secondary hover:bg-transparent hover:text-secondary hover:border-secondary transition"
                     >
                       Become User
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="/mentors"
-                      className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
+                      className="block px-4 py-2 rounded-md text-sm font-medium border no-underline border-primary text-muted bg-primary hover:text-primary hover:bg-transparent hover:border-primary transition"
                     >
                       Become Mentor
-                    </a>
+                    </Link>
                   </li>
                 )}
                 {header.input && (
                   <li className=" w-full max-w-md">
-                    <div className="my-8">
+                    <div className="my-4">
                       <InputEmail title="Notify Me" apiUrl="/api/newsletter" type={header.type} />
-                      <a
+                      <Link
                         href={pathname === "/mentors" ? "/users" : "/mentors"}
-                        className={`block px-4 py-2 mt-4 rounded-md text-sm font-medium border hover:text-muted ${
+                        className={`block px-4 py-2 mt-4 ml-2 rounded-md text-sm font-medium border no-underline  ${
                           pathname === "/mentors"
-                            ? "border-primary text-primary hover:bg-primary"
-                            : "border-secondary text-secondary hover:bg-secondary"
+                            ? "text-muted border-secondary bg-secondary hover:bg-transparent hover:text-secondary hover:border-secondary "
+                            : "border-primary text-muted bg-primary hover:text-primary hover:bg-transparent hover:border-primary transition"
                         } transition max-w-max`}
                       >
                         Become {pathname === "/mentors" ? "User" : "Mentor"}
-                      </a>
+                      </Link>
                     </div>
                   </li>
                 )}
@@ -155,10 +156,7 @@ function Header({ header, partners }) {
             ref={ref}
           >
             <div className={`${header.screenshots.length === 1 ? "" : "sticky"} md:top-40 flex justify-center`}>
-              <SVGBlob
-                scrollYProgress={scrollYProgress}
-                className="-z-10 absolute hidden w-[500px] -top-20 md:block"
-              />
+              <SVGBlob scrollYProgress={scrollYProgress} className="-z-10 absolute hidden w-[500px] -top-20 md:block" />
               <motion.div
                 initial={{ scale: 0.4, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
