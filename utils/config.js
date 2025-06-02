@@ -44,10 +44,10 @@ const templateConfig = {
     hideGooglePlay: false,
     links: [
       { href: "/", title: "Home" },
-      { href: "/#features", title: "Features" },
-      { href: "/#how-it-works", title: "How it works" },
-      { href: "/#pricing", title: "Pricing" },
-      { href: "/#faq", title: "FAQ" },
+      { href: "#features", title: "Features" },
+      { href: "#how-it-works", title: "How it works" },
+      { href: "#pricing", title: "Pricing" },
+      { href: "#faq", title: "FAQ" },
     ],
   },
   appBanner: {
@@ -241,7 +241,7 @@ const templateConfig = {
       id: "pricing",
       title: "Choose Your Plan",
       subtitle: "Unlock premium features for a better experience",
-      actionText: "We Will Notify You",
+      actionText: "Signup for Waitlist",
       plans: [
         {
           title: "Basic Tier",

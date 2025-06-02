@@ -85,24 +85,24 @@ function Header({ header, partners }) {
                 className="list-none flex gap-4 m-0 p-0 text-black"
               >
                 {!header.input && (
-                  <li className="flex flex-row gap-5 my-4">
+                  <li className="flex flex-row gap-5 my-8">
                     <Link
                       href="/users"
                       className="block px-4 py-2 rounded-md text-sm font-medium border no-underline text-muted border-secondary bg-secondary hover:bg-transparent hover:text-secondary hover:border-secondary transition"
                     >
-                      Become User
+                      Become a User
                     </Link>
                     <Link
                       href="/mentors"
                       className="block px-4 py-2 rounded-md text-sm font-medium border no-underline border-primary text-muted bg-primary hover:text-primary hover:bg-transparent hover:border-primary transition"
                     >
-                      Become Mentor
+                      Become a Mentor
                     </Link>
                   </li>
                 )}
                 {header.input && (
                   <li className=" w-full max-w-md">
-                    <div className="my-4">
+                    <div className="my-8">
                       <InputEmail title="Notify Me" apiUrl="/api/newsletter" type={header.type} />
                       <Link
                         href={pathname === "/mentors" ? "/users" : "/mentors"}
@@ -112,7 +112,7 @@ function Header({ header, partners }) {
                             : "border-primary text-muted bg-primary hover:text-primary hover:bg-transparent hover:border-primary transition"
                         } transition max-w-max`}
                       >
-                        Become {pathname === "/mentors" ? "User" : "Mentor"}
+                        Become {pathname === "/mentors" ? "a User" : "a Mentor"}
                       </Link>
                     </div>
                   </li>
