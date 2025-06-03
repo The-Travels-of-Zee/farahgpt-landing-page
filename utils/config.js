@@ -29,7 +29,7 @@ const templateConfig = {
       facebook: "https://facebook.com/google",
       twitter: "https://x.com/google",
       upwork: "https://www.upwork.com/agencies/1900660843112486960/",
-      linkedin: "https://www.linkedin.com/company/the-travels-of-zee/people/",
+      linkedin: "https://www.linkedin.com/company/farahgpt/",
     },
     links: [
       { href: "/#features", title: "Features" },

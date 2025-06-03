@@ -37,20 +37,6 @@ function Footer() {
         </nav>
         <aside className="flex flex-col items-center justify-between mt-8 w-full overflow-hidden md:flex-row lg:overflow-visible">
           <div className="flex items-center gap-3 w-full text-white">
-            {socials.upwork && (
-              <motion.a
-                variants={{
-                  hidden: { opacity: 0, x: "-100%" },
-                  visible: { opacity: 1, x: 0 },
-                }}
-                transition={{ delay: 0.75 }}
-                className="w-10 h-10 hover:bg-accent rounded-lg"
-                target="_blank"
-                href={socials.upwork}
-              >
-                <FaSquareUpwork className="size-10" />
-              </motion.a>
-            )}
             {socials.linkedin && (
               <motion.a
                 variants={{
