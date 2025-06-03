@@ -1,7 +1,7 @@
 "use client";
 import { useContext } from "react";
 import { ConfigContext } from "@/utils/configContext";
-import { FaSquareUpwork, FaLinkedinIn } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
 import { motion } from "@/lib/motion";
 import Link from "next/link";
 
@@ -21,7 +21,7 @@ function Footer() {
         className="max-w-screen-lg mx-auto flex flex-col gap-8"
       >
         {/* Top Section: Links Left - Socials + PoweredBy Right */}
-        <div className="flex flex-col md:flex-row justify-between items-end w-full">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end w-full">
           {/* Left - Navigation Links */}
           <div className="flex flex-col gap-4">
             {links.map(({ title, href }, index) => (
@@ -41,7 +41,7 @@ function Footer() {
           </div>
 
           {/* Right - Socials + Powered By */}
-          <div className="flex flex-col items-end gap-2 mt-8 md:mt-0">
+          <div className="hidden md:flex flex-col mx-auto md:mx-0 items-end gap-2 mt-8 md:mt-0">
             {socials.linkedin && (
               <motion.a
                 variants={{
@@ -49,7 +49,7 @@ function Footer() {
                   visible: { opacity: 1, x: 0 },
                 }}
                 transition={{ delay: 0.75 }}
-                className="w-10 h-10 mb-3 bg-accent/20 hover:bg-accent rounded-full flex items-center justify-center"
+                className="w-10 h-10 mb-3 bg-accent/20 hover:bg-accent rounded-full flex items-center justify-center ease-in-out duration-200"
                 target="_blank"
                 href={socials.linkedin}
               >
@@ -70,7 +70,7 @@ function Footer() {
                   <img
                     src="./favicon/the-travels-of-zee-logo.png"
                     alt="the-travels-of-zee-logo"
-                    className="w-48 invert hover:invert-0 inline ml-1 hover:bg-accent"
+                    className="w-48 invert hover:invert-0 inline ml-1 hover:bg-accent ease-in-out duration-200"
                   />
                 </motion.div>
               </Link>
@@ -81,6 +81,41 @@ function Footer() {
         {/* Bottom Section: Right-aligned Legal */}
         <div className="flex justify-end w-full">
           <div className="flex flex-col md:flex-row gap-4 items-end md:items-center text-sm text-white">
+            <div className="flex flex-col my-2 gap-2 items-end md:hidden">
+              {socials.linkedin && (
+                <motion.a
+                  variants={{
+                    hidden: { opacity: 0, x: "-100%" },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  transition={{ delay: 0.75 }}
+                  className="w-10 h-10 mb-3 bg-accent/20 hover:bg-accent rounded-full flex items-center justify-center ease-in-out duration-200"
+                  target="_blank"
+                  href={socials.linkedin}
+                >
+                  <FaLinkedinIn className="size-5 text-white" />
+                </motion.a>
+              )}
+              {poweredBy && (
+                <Link href={poweredBy.link} target="_blank" rel="noopener noreferrer">
+                  <motion.div
+                    variants={{
+                      hidden: { opacity: 0, scale: 0.4 },
+                      visible: { opacity: 1, scale: 1 },
+                    }}
+                    transition={{ delay: 1 }}
+                    className="text-sm text-white"
+                  >
+                    Powered by{" "}
+                    <img
+                      src="./favicon/the-travels-of-zee-logo.png"
+                      alt="the-travels-of-zee-logo"
+                      className="w-48 invert hover:invert-0 inline ml-1 hover:bg-accent ease-in-out duration-200"
+                    />
+                  </motion.div>
+                </Link>
+              )}
+            </div>
             {legalLinks.privacyPolicy && (
               <motion.a
                 variants={{
@@ -88,7 +123,7 @@ function Footer() {
                   visible: { opacity: 1, scale: 1 },
                 }}
                 transition={{ delay: 0.25 }}
-                className="font-bold hover:text-accent"
+                className="font-bold hover:text-accent ease-in-out duration-200"
                 href="/privacy-policy"
               >
                 Privacy policy
