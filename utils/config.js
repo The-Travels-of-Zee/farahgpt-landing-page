@@ -449,7 +449,7 @@ Welcome to FarahGPT. We are committed to protecting your privacy. This Privacy P
 ## Information We Collect
 
 ### 1. Information You Provide
-- **Account Information:** When you sign up for our App, we may collect your name, email address, and other contact information.
+- **Account Information:** When you sign up for our App, We may collect identifiers such as your name, email address, and any other information you provide when creating an account.
 - **User Content:** We may collect any content you upload, post, or otherwise transmit through the App, including messages, photos, and other media.
 
 ### 2. Information We Collect Automatically
@@ -458,6 +458,14 @@ Welcome to FarahGPT. We are committed to protecting your privacy. This Privacy P
 
 ### 3. Information from Third Parties
 - **Third-Party Services:** If you connect to the App through a third-party service (e.g., social media), we may collect information from that service as permitted by their privacy policies.
+
+## Legal Basis
+
+We process your personal information based on your consent, to fulfill our contractual obligations, and where we have a legitimate interest.
+
+## Children’s Privacy
+
+Our App is not intended for use by children under the age of 13 (or 16 in the EU). We do not knowingly collect personal information from children.
 
 ## How We Use Your Information
 
@@ -483,6 +491,8 @@ We do not share your personal information with third parties except in the follo
 ## Security
 
 We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no security system is completely secure, and we cannot guarantee the absolute security of your information.
+
+We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.
 
 ## Changes to This Privacy Policy
 
