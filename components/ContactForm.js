@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 import { Send, Mail, User, Target, MessageSquare } from "lucide-react";
 import { Input } from "@/components/ui/input";

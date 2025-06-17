@@ -1,38 +1,16 @@
+"use client";
 import React from "react";
 import { DollarSign, Users, BookOpen, Trash2, BarChart2, UserX2, BookPlus } from "lucide-react";
 import { motion } from "@/lib/motion";
 import { Bar, Line } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Tooltip } from "chart.js";
 import AnimatedText from "./AnimatedText";
+import { mentorDashboard } from "@/constants";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Tooltip);
 
-// Sample earnings data
-const earningsData = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-  datasets: [
-    {
-      label: "Earnings",
-      data: [500, 900, 1200, 1600, 1820, 2100],
-      backgroundColor: "#34d399",
-    },
-  ],
-};
-
-const studentsData = {
-  labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
-  datasets: [
-    {
-      label: "New Students",
-      data: [10, 25, 18, 30, 22],
-      borderColor: "#3b82f6",
-      tension: 0.3,
-      fill: false,
-    },
-  ],
-};
-
 const MentorDashboard = () => {
+  const { earningsData, studentsData } = mentorDashboard;
   return (
     <section className="py-16 px-10 md:px-20">
       <div className="max-w-7xl mx-auto flex flex-col items-center">

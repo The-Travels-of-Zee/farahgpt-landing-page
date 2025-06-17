@@ -1,20 +1,15 @@
-import AnimatedText from "@/components/AnimatedText";
+"use client";
+import AnimatedText from "@/components/landing/AnimatedText";
 import clsx from "clsx";
 import { motion } from "@/lib/motion";
-import { useContext } from "react";
-import { ConfigContext } from "@/utils/configContext";
 import Link from "next/link";
+import { pricing } from "@/constants";
 
 const planImages = ["/misc/wallet-front-color.webp", "/misc/money-front-color.webp", "/misc/locker-front-color.webp"];
 
 const planBGs = ["bg-primary/80", "bg-secondary/80", "bg-accent/80"];
 
 function Pricing() {
-  const {
-    home: { pricing },
-  } = useContext(ConfigContext);
-  if (!pricing) return null;
-
   return (
     <section id={pricing.id} className="overflow-hidden max-w-screen-lg mx-auto px-4 py-12">
       <div className="my-8 md:my-14 max-w-none flex flex-col items-center prose prose-lg text-center">

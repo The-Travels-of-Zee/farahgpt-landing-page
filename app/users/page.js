@@ -1,25 +1,19 @@
-"use client";
-import AppBanner from "@/components/AppBanner";
+import AppBanner from "@/components/landing/AppBanner";
 import ContactForm from "@/components/ContactForm";
-import Faq from "@/components/Faq";
-import Features from "@/components/Features";
-import Header from "@/components/Header";
-import HowItWorks from "@/components/HowItWorks";
-import Pricing from "@/components/Pricing";
-import VideoMockup from "@/components/VideoMockup";
-import { ConfigContext } from "@/utils/configContext";
-import { useContext } from "react";
+import Faq from "@/components/landing/Faq";
+import Features from "@/components/landing/Features";
+import Header from "@/components/landing/Header";
+import HowItWorks from "@/components/landing/HowItWorks";
+import Pricing from "@/components/landing/Pricing";
+import VideoMockup from "@/components/landing/VideoMockup";
 
 const Users = () => {
-  const {
-    users: { header, features, howItWorks },
-  } = useContext(ConfigContext);
   return (
     <div>
-      <Header header={header} />
-      <Features features={features} />
+      <Header />
+      <Features />
       <VideoMockup videoSrc="/videos/test-video.webm" />
-      <HowItWorks howItWorks={howItWorks} />
+      <HowItWorks />
       <Pricing />
       <Faq />
       <ContactForm />

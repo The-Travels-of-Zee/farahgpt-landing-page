@@ -1,35 +1,26 @@
-"use client";
-import Faq from "@/components/Faq";
-import Header from "@/components/Header";
-import { ConfigContext } from "@/utils/configContext";
-import templateConfig from "@/utils/config";
-import React, { useContext } from "react";
-import HowItWorks from "@/components/HowItWorks";
-import Features from "@/components/Features";
-import AppBanner from "@/components/AppBanner";
-import Pricing from "@/components/Pricing";
-import VideoMockup from "@/components/VideoMockup";
+import Faq from "@/components/landing/Faq";
+import Header from "@/components/landing/Header";
+import HowItWorks from "@/components/landing/HowItWorks";
+import Features from "@/components/landing/Features";
+import AppBanner from "@/components/landing/AppBanner";
+import Pricing from "@/components/landing/Pricing";
+import VideoMockup from "@/components/landing/VideoMockup";
 import ContactForm from "@/components/ContactForm";
+import MentorDashboard from "@/components/landing/MentorDashboard";
 
 const Main = () => {
-  const {
-    // googlePlayLink,
-    // appStoreLink,
-    home: { header, features, partners, howItWorks },
-  } = useContext(ConfigContext);
   return (
-    <ConfigContext.Provider value={templateConfig}>
-      <main>
-        <Header header={header} partners={partners} />
-        <Features features={features} />
-        <VideoMockup videoSrc="/videos/test-video.webm" />
-        <HowItWorks howItWorks={howItWorks} />
-        <Pricing />
-        <Faq />
-        <ContactForm />
-        <AppBanner />
-      </main>
-    </ConfigContext.Provider>
+    <main>
+      <Header />
+      <Features />
+      <VideoMockup videoSrc="/videos/test-video.webm" />
+      <HowItWorks />
+      <MentorDashboard />
+      <Pricing />
+      <Faq />
+      <ContactForm />
+      <AppBanner />
+    </main>
   );
 };
 

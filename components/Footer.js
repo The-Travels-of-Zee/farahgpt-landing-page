@@ -1,15 +1,10 @@
 "use client";
-import { useContext } from "react";
-import { ConfigContext } from "@/utils/configContext";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { motion } from "@/lib/motion";
 import Link from "next/link";
+import { footer } from "@/constants";
 
 function Footer() {
-  const {
-    footer: { links, legalLinks, socials, poweredBy },
-  } = useContext(ConfigContext);
-
   return (
     <footer className="relative bg-primary px-4 py-12 mt-12">
       <div className="absolute rounded-t-[50%] -top-12 left-0 bg-primary w-full h-12" />
@@ -24,7 +19,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end w-full">
           {/* Left - Navigation Links */}
           <div className="flex flex-col gap-4">
-            {links.map(({ title, href }, index) => (
+            {footer.links.map(({ title, href }, index) => (
               <motion.a
                 key={index}
                 variants={{
@@ -42,7 +37,7 @@ function Footer() {
 
           {/* Right - Socials + Powered By */}
           <div className="hidden md:flex flex-col mx-auto md:mx-0 items-end gap-2 mt-8 md:mt-0">
-            {socials.linkedin && (
+            {footer.socials.linkedin && (
               <motion.a
                 variants={{
                   hidden: { opacity: 0, x: "-100%" },
@@ -51,13 +46,13 @@ function Footer() {
                 transition={{ delay: 0.75 }}
                 className="w-10 h-10 mb-3 bg-accent/20 hover:bg-accent rounded-full flex items-center justify-center ease-in-out duration-200"
                 target="_blank"
-                href={socials.linkedin}
+                href={footer.socials.linkedin}
               >
                 <FaLinkedinIn className="size-5 text-white" />
               </motion.a>
             )}
-            {poweredBy && (
-              <Link href={poweredBy.link} target="_blank" rel="noopener noreferrer">
+            {footer.poweredBy && (
+              <Link href={footer.poweredBy.link} target="_blank" rel="noopener noreferrer">
                 <motion.div
                   variants={{
                     hidden: { opacity: 0, scale: 0.4 },
@@ -82,7 +77,7 @@ function Footer() {
         <div className="flex justify-end w-full">
           <div className="flex flex-col md:flex-row gap-4 items-end md:items-center text-sm text-white">
             <div className="flex flex-col my-2 gap-2 items-end md:hidden">
-              {socials.linkedin && (
+              {footer.socials.linkedin && (
                 <motion.a
                   variants={{
                     hidden: { opacity: 0, x: "-100%" },
@@ -91,13 +86,13 @@ function Footer() {
                   transition={{ delay: 0.75 }}
                   className="w-10 h-10 mb-3 bg-accent/20 hover:bg-accent rounded-full flex items-center justify-center ease-in-out duration-200"
                   target="_blank"
-                  href={socials.linkedin}
+                  href={footer.socials.linkedin}
                 >
                   <FaLinkedinIn className="size-5 text-white" />
                 </motion.a>
               )}
-              {poweredBy && (
-                <Link href={poweredBy.link} target="_blank" rel="noopener noreferrer">
+              {footer.poweredBy && (
+                <Link href={footer.poweredBy.link} target="_blank" rel="noopener noreferrer">
                   <motion.div
                     variants={{
                       hidden: { opacity: 0, scale: 0.4 },
@@ -116,7 +111,7 @@ function Footer() {
                 </Link>
               )}
             </div>
-            {legalLinks.privacyPolicy && (
+            {footer.legalLinks.privacyPolicy && (
               <motion.a
                 variants={{
                   hidden: { opacity: 0, scale: 0.4 },

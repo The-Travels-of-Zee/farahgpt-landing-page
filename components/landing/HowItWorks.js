@@ -1,14 +1,16 @@
-import AnimatedText from "@/components/AnimatedText";
+"use client";
+import { useState } from "react";
+import AnimatedText from "@/components/landing/AnimatedText";
 import clsx from "clsx";
 import { motion } from "@/lib/motion";
-import { useContext } from "react";
-import { ConfigContext } from "@/utils/configContext";
 import SwirlArrowBottomLeft from "@/public/svg/swirlArrowBottomLeft";
 import SwirlArrowBottomRight from "@/public/svg/swirlArrowBottomRight";
 import SwirlArrowBottom from "@/public/svg/swirlArrowBottom";
+import { mentorsHowItWorks, usersHowItWorks } from "@/constants";
 
-function HowItWorks({ howItWorks }) {
-  if (!howItWorks) return null;
+function HowItWorks() {
+  const [activeHowItWorks, setActiveHowItWorks] = useState("users"); // 'users' or 'mentors'
+  const howItWorks = activeHowItWorks === "users" ? usersHowItWorks : mentorsHowItWorks;
 
   return (
     <section id={howItWorks.id} className="overflow-hidden max-w-screen-lg mx-auto px-4 pb-20 md:pb-12 pt-12">
@@ -32,7 +34,42 @@ function HowItWorks({ howItWorks }) {
           </motion.p>
         )}
       </div>
-      <div className="flex flex-col gap-38 md:gap-32">
+
+      <div className="flex justify-center mb-8">
+        <div className="relative bg-gray-100 rounded-full p-1 shadow-inner">
+          <div className="flex">
+            <button
+              onClick={() => setActiveHowItWorks("users")}
+              className={clsx(
+                "relative px-12 py-3 rounded-full text-lg font-medium transition-all duration-300 ease-in-out",
+                activeHowItWorks === "users"
+                  ? "text-white shadow-md bg-gradient-to-r from-primary to-secondary"
+                  : "text-gray-600 hover:text-gray-800"
+              )}
+            >
+              Users
+            </button>
+            <button
+              onClick={() => setActiveHowItWorks("mentors")}
+              className={clsx(
+                "relative px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 ease-in-out",
+                activeHowItWorks === "mentors"
+                  ? "text-white shadow-md bg-gradient-to-r from-primary to-secondary"
+                  : "text-gray-600 hover:text-gray-800"
+              )}
+            >
+              Mentors
+            </button>
+          </div>
+        </div>
+      </div>
+      <motion.div
+        key={activeHowItWorks}
+        initial="hidden"
+        animate="visible"
+        viewport={{ once: false }}
+        className="flex flex-col gap-38 md:gap-32"
+      >
         {howItWorks.steps.map((step, index) => (
           <motion.div
             key={index}
@@ -98,7 +135,7 @@ function HowItWorks({ howItWorks }) {
             </motion.div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
