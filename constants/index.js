@@ -32,6 +32,51 @@ export const header = {
   rewards: ["إن شاءالله"],
   usersDescription: "2,000+ people already in the waiting list",
   headlineMark: [2, 5],
+  buttons: true,
+};
+
+export const homeHowItWorks = {
+  id: "how-it-works",
+  title: "How It Works",
+  subtitle:
+    "Begin your journey of seeking and sharing knowledge with these simple steps, rooted in sincerity and ease.",
+  steps: [
+    {
+      title: "Choose Your Path",
+      subtitle: "Sign up and select whether you're a Student (طالب علم) or a Mentor (معلم). Your journey begins here.",
+      image: "/images/choose-role.webp",
+    },
+    {
+      title: "Set Up Your Profile",
+      subtitle:
+        "Create a profile that reflects your goals and interests. Mentors can showcase their expertise, while students highlight areas of focus.",
+      image: "/images/setup-profile.webp",
+    },
+    {
+      title: "Browse or Upload Courses",
+      subtitle:
+        "Students can explore a growing library of paid and free courses in Qur’an, Hadith, Fiqh, Arabic, and more. Mentors can upload and manage structured lessons with ease.",
+      image: "/images/browse-courses.webp",
+    },
+    {
+      title: "Get Support from FarahGPT",
+      subtitle:
+        "Meet FarahGPT — your AI-powered Islamic assistant. Ask questions about course material, get authentic references, and receive guidance based on trusted scholarly sources.",
+      image: "/images/farahgpt-help.webp",
+    },
+    {
+      title: "Learn and Interact",
+      subtitle:
+        "Join live classes or watch recordings. Ask questions, leave feedback, and benefit from direct mentor guidance, all in one place.",
+      image: "/images/learn-interact.webp",
+    },
+    {
+      title: "Grow with Consistency (Istiqamah)",
+      subtitle:
+        "Track your learning, set goals, and build habits of consistent seeking or teaching of knowledge, striving for barakah and impact.",
+      image: "/images/grow-consistency.webp",
+    },
+  ],
 };
 
 export const appBanner = {
@@ -176,38 +221,31 @@ export const usersHowItWorks = {
     "Begin your journey of knowledge with clarity and sincerity. Here's how to get started as a student of deen.",
   steps: [
     {
-      title: "Choose Your Path",
-      subtitle: "Sign up and select whether you're a Student (طالب علم) or a Mentor (معلم). Your journey begins here.",
+      title: "Sign Up with Intention",
+      subtitle: "Create your free account and set your niyyah (intention) to seek knowledge for the sake of Allahﷻ.",
       image: "/images/choose-role.webp",
     },
     {
-      title: "Set Up Your Profile",
-      subtitle:
-        "Create a profile that reflects your goals and interests. Mentors can showcase their expertise, while students highlight areas of focus.",
-      image: "/images/setup-profile.webp",
-    },
-    {
-      title: "Browse or Upload Courses",
-      subtitle:
-        "Students can explore a growing library of paid and free courses in Qur’an, Hadith, Fiqh, Arabic, and more. Mentors can upload and manage structured lessons with ease.",
+      title: "Enroll into Courses or Use FarahGPT",
+      subtitle: "Browse a range of authentic courses with FarahGPT AI assisting you with learning.",
       image: "/images/browse-courses.webp",
     },
     {
-      title: "Get Support from FarahGPT",
+      title: "Learn at Your Own Pace",
       subtitle:
-        "Meet FarahGPT — your AI-powered Islamic assistant. Ask questions about course material, get authentic references, and receive guidance based on trusted scholarly sources.",
+        "Access lessons anytime. Watch videos, read materials, and revisit recordings, on your own time, with full flexibility.",
+      image: "/images/learn-at-your-pace.webp",
+    },
+    {
+      title: "Ask & Reflect with FarahGPT",
+      subtitle:
+        "Have questions? FarahGPT is here to help with answers grounded in authentic Islamic sources, 24/7 support, just a message away.",
       image: "/images/farahgpt-help.webp",
     },
     {
-      title: "Learn and Interact",
+      title: "Grow with Barakah",
       subtitle:
-        "Join live classes or watch recordings. Ask questions, leave feedback, and benefit from direct mentor guidance, all in one place.",
-      image: "/images/learn-interact.webp",
-    },
-    {
-      title: "Grow with Consistency (Istiqamah)",
-      subtitle:
-        "Track your learning, set goals, and build habits of consistent seeking or teaching of knowledge, striving for barakah and impact.",
+        "Track your learning. Set goals. Stay consistent. Let your efforts grow with istiqamah, and trust that Allahﷻ Sees every step.",
       image: "/images/grow-consistency.webp",
     },
   ],

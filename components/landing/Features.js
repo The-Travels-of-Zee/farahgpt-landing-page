@@ -4,16 +4,29 @@ import clsx from "clsx";
 import { motion } from "@/lib/motion";
 import { mentorsFeatures, usersFeatures } from "@/constants";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 function Features() {
-  const [activeFeature, setActiveFeature] = useState("users"); // 'users' or 'mentors'
-  const features = activeFeature === "users" ? usersFeatures : mentorsFeatures;
+  const pathname = usePathname();
+  // const [activeFeature, setActiveFeature] = useState("users"); // 'users' or 'mentors'
+  // const features = activeFeature === "users" ? usersFeatures : mentorsFeatures;
+  let features;
+  if (pathname === "/users") {
+    features = usersFeatures;
+  } else if (pathname === "/mentors") {
+    features = mentorsFeatures;
+  } else {
+    features = usersFeatures;
+  }
 
   return (
     <section id={features.id} className="max-w-screen-md mx-auto px-4 py-12">
       <div className="my-8 md:my-12 max-w-none flex flex-col items-center prose prose-lg text-center">
         <h1 className="mb-3 font-roboto leading-none md:leading-16">
-          <AnimatedText text={features.title} key={activeFeature} />
+          <AnimatedText
+            text={features.title}
+            // key={activeFeature}
+          />
         </h1>
         <motion.div
           className="h-2 bg-gradient-to-r from-primary to-secondary rounded-full overflow-hidden [--w:200px] md:[--w:350px] mb-4"
@@ -33,7 +46,7 @@ function Features() {
       </div>
 
       {/* Feature Switcher */}
-      <div className="flex justify-center mb-8">
+      {/* <div className="flex justify-center mb-8">
         <div className="relative bg-gray-100 rounded-full p-1 shadow-inner">
           <div className="flex">
             <button
@@ -60,10 +73,10 @@ function Features() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <motion.div
-        key={activeFeature} // This will trigger re-animation when switching
+        // key={activeFeature}
         initial="hidden"
         animate="visible"
         viewport={{ once: false }}
@@ -71,7 +84,7 @@ function Features() {
       >
         {features.cards.map((feat, index) => (
           <motion.div
-            key={`${activeFeature}-${index}`}
+            key={`${feat}-${index}`}
             variants={{
               hidden: { x: "-100%", opacity: 0 },
               visible: { x: 0, opacity: 1 },

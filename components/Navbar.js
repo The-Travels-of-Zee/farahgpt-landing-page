@@ -3,6 +3,8 @@
 import AnimatedList from "@/components/landing/AnimatedList";
 import MenuToggle from "@/components/landing/MenuToggle";
 // import ThemeSwitcher from "@/components/ThemeSwitcher";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
+import { ChevronDownIcon } from "lucide-react";
 import { motion } from "@/lib/motion";
 import { useState } from "react";
 import Link from "next/link";
@@ -32,12 +34,34 @@ function Navbar() {
               {title}
             </Link>
           ))}
-          {topNavbar.cta && (
+          {/* {topNavbar.cta && (
             <Link href="/#header">
               <button className="group ml-2 px-4 py-2 rounded-full text-sm font-semibold border hover:border-primary text-muted hover:text-primary hover:bg-transparent bg-primary transition flex items-center gap-2 cursor-pointer">
                 {topNavbar.cta}
               </button>
             </Link>
+          )} */}
+          {topNavbar.cta && (
+            <HoverCard>
+              <HoverCardTrigger className="group ml-4 px-4 py-2 rounded-full text-sm font-semibold border border-primary hover:text-muted text-primary hover:bg-primary transition flex items-center gap-2">
+                {topNavbar.cta}
+                <ChevronDownIcon className="size-5 transition-transform duration-200 group-hover:rotate-180" />
+              </HoverCardTrigger>
+              <HoverCardContent className="flex flex-col space-y-2 bg-white/75 backdrop-blur-lg p-4 rounded-lg shadow-lg">
+                <Link
+                  href="/users"
+                  className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
+                >
+                  Become User
+                </Link>
+                <Link
+                  href="/mentors"
+                  className="block px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary hover:text-muted hover:bg-primary transition"
+                >
+                  Become Mentor
+                </Link>
+              </HoverCardContent>
+            </HoverCard>
           )}
 
           {/* {showThemeSwitch && <ThemeSwitcher />} */}
