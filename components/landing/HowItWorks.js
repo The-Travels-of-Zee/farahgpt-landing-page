@@ -6,11 +6,21 @@ import { motion } from "@/lib/motion";
 import SwirlArrowBottomLeft from "@/public/svg/swirlArrowBottomLeft";
 import SwirlArrowBottomRight from "@/public/svg/swirlArrowBottomRight";
 import SwirlArrowBottom from "@/public/svg/swirlArrowBottom";
-import { mentorsHowItWorks, usersHowItWorks } from "@/constants";
+import { homeHowItWorks, mentorsHowItWorks, usersHowItWorks } from "@/constants";
+import { usePathname } from "next/navigation";
 
 function HowItWorks() {
-  const [activeHowItWorks, setActiveHowItWorks] = useState("users"); // 'users' or 'mentors'
-  const howItWorks = activeHowItWorks === "users" ? usersHowItWorks : mentorsHowItWorks;
+  const pathname = usePathname();
+  // const [activeHowItWorks, setActiveHowItWorks] = useState("users"); // 'users' or 'mentors'
+  // const howItWorks = activeHowItWorks === "users" ? usersHowItWorks : mentorsHowItWorks;
+  let howItWorks;
+  if (pathname === "/users") {
+    howItWorks = usersHowItWorks;
+  } else if (pathname === "/mentors") {
+    howItWorks = mentorsHowItWorks;
+  } else {
+    howItWorks = homeHowItWorks;
+  }
 
   return (
     <section id={howItWorks.id} className="overflow-hidden max-w-screen-lg mx-auto px-4 pb-20 md:pb-12 pt-12">
@@ -35,7 +45,7 @@ function HowItWorks() {
         )}
       </div>
 
-      <div className="flex justify-center mb-8">
+      {/* <div className="flex justify-center mb-8">
         <div className="relative bg-gray-100 rounded-full p-1 shadow-inner">
           <div className="flex">
             <button
@@ -62,9 +72,9 @@ function HowItWorks() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
       <motion.div
-        key={activeHowItWorks}
+        // key={activeHowItWorks}
         initial="hidden"
         animate="visible"
         viewport={{ once: false }}

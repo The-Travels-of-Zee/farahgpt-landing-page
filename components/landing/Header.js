@@ -6,14 +6,22 @@ import SingleScreenshot from "@/components/landing/SingleScreenshot";
 import SVGBlob from "@/public/svg/blob";
 import InputEmail from "./InputEmail";
 import { header } from "@/constants";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 function Header() {
-  const [selectedType, setSelectedType] = useState("users"); // Default to "users"
-  const [newsletterType, setNewsletterType] = useState("users"); // For InputEmail component
-  const handleTypeToggle = (type) => {
-    setSelectedType(type);
-    setNewsletterType(type === "mentors" ? "mentors" : "users");
-  };
+  const pathname = usePathname();
+
+  // if (pathname === "/users" || "/mentors") {
+  //   return (header.input = false);
+  // }
+
+  // const [selectedType, setSelectedType] = useState("users"); // Default to "users"
+  // const [newsletterType, setNewsletterType] = useState("users"); // For InputEmail component
+  // const handleTypeToggle = (type) => {
+  //   setSelectedType(type);
+  //   setNewsletterType(type === "mentors" ? "mentors" : "users");
+  // };
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -83,14 +91,53 @@ function Header() {
               </motion.p>
 
               {/* CTA Buttons */}
-              <motion.div
+              <motion.ul
+                initial={{ opacity: 0, y: "100%" }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="list-none flex gap-4 m-0 p-0 text-black"
+              >
+                {header.buttons && pathname === "/" && (
+                  <li className="flex flex-row gap-5 my-8">
+                    <Link
+                      href="/users"
+                      className="block px-4 py-2 rounded-md text-sm font-medium border no-underline text-muted border-secondary bg-secondary hover:bg-transparent hover:text-secondary hover:border-secondary transition"
+                    >
+                      Become a User
+                    </Link>
+                    <Link
+                      href="/mentors"
+                      className="block px-4 py-2 rounded-md text-sm font-medium border no-underline border-primary text-muted bg-primary hover:text-primary hover:bg-transparent hover:border-primary transition"
+                    >
+                      Become a Mentor
+                    </Link>
+                  </li>
+                )}
+                {(pathname === "/users" || pathname === "/mentors") && (
+                  <li className=" w-full max-w-md">
+                    <div className="my-8">
+                      <InputEmail title="Notify Me" apiUrl="/api/newsletter" type={header.type} />
+                      <Link
+                        href={pathname === "/mentors" ? "/users" : "/mentors"}
+                        className={`block px-4 py-2 mt-4 ml-2 rounded-md text-sm font-medium border no-underline  ${
+                          pathname === "/mentors"
+                            ? "text-muted border-secondary bg-secondary hover:bg-transparent hover:text-secondary hover:border-secondary "
+                            : "border-primary text-muted bg-primary hover:text-primary hover:bg-transparent hover:border-primary transition"
+                        } transition max-w-max`}
+                      >
+                        Become {pathname === "/mentors" ? "a User" : "a Mentor"}
+                      </Link>
+                    </div>
+                  </li>
+                )}
+              </motion.ul>
+              {/* <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="mt-4 mb-8 lg:mb-12"
               >
                 <div className="max-w-md mx-auto lg:mx-0 space-y-6">
-                  {/* Toggle Buttons - Fixed scaling issue */}
                   <div className="flex bg-gray-200 backdrop-blur-md rounded-full p-1 border border-white/20 overflow-hidden">
                     <button
                       onClick={() => handleTypeToggle("users")}
@@ -113,15 +160,13 @@ function Header() {
                       Mentor
                     </button>
                   </div>
-
-                  {/* Email Input */}
                   <InputEmail
                     title={selectedType === "users" ? "Join as User" : "Join as Mentor"}
                     apiUrl="/api/newsletter"
                     type={newsletterType}
                   />
                 </div>
-              </motion.div>
+              </motion.div> */}
               {header.usersDescription && (
                 <div className="not-prose flex items-center gap-3 my-1">
                   <ul className="flex -space-x-2">

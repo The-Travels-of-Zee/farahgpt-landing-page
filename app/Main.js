@@ -15,7 +15,7 @@ const Main = () => {
       <Features />
       <VideoMockup videoSrc="/videos/test-video.webm" />
       <HowItWorks />
-      <MentorDashboard />
+      {/* <MentorDashboard /> */}
       <Pricing />
       <Faq />
       <ContactForm />
