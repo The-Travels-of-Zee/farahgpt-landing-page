@@ -1,15 +1,11 @@
-import { useContext } from "react";
-import { ConfigContext } from "@/utils/configContext";
-import Spill from "@/public/svg/spill";
-import IPhoneFrame from "@/components/IPhoneFrame";
+"use client";
+import IPhoneFrame from "@/components/landing/IPhoneFrame";
 import { motion } from "@/lib/motion";
 import clsx from "clsx";
 import Link from "next/link";
+import { appBanner } from "@/constants";
 
 function AppBanner() {
-  const { googlePlayLink, appStoreLink, appBanner } = useContext(ConfigContext);
-
-  if (!appBanner) return null;
   return (
     <motion.section
       id={appBanner.id}
@@ -59,16 +55,16 @@ function AppBanner() {
               transition={{ delay: 0.8 }}
               className="list-none flex gap-4 my-6 p-0 w-full"
             >
-              {googlePlayLink && (
+              {appBanner.googlePlayLink && (
                 <li className="m-0 p-0">
-                  <Link href={"/users"}>
+                  <Link href={"/"}>
                     <img className="h-14" alt="google play logo" src="/stores/google-play.svg" />
                   </Link>
                 </li>
               )}
-              {appStoreLink && (
+              {appBanner.appStoreLink && (
                 <li className="m-0 p-0">
-                  <Link href={"/users"}>
+                  <Link href={"/"}>
                     <img className="h-14" alt="app store logo" src="/stores/app-store.svg" />
                   </Link>
                 </li>

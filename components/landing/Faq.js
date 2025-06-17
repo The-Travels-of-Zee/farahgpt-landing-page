@@ -1,19 +1,11 @@
 "use client";
-
-import AnimatedText from "@/components/AnimatedText";
-import { useContext } from "react";
-import { ConfigContext } from "@/utils/configContext";
+import AnimatedText from "@/components/landing/AnimatedText";
 import NeonHexagon from "@/public/svg/neonHexagon";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "@/lib/motion";
+import { faq } from "@/constants";
 
 function Faq() {
-  const {
-    home: { faq },
-  } = useContext(ConfigContext);
-
-  if (!faq) return null;
-
   return (
     <section id={faq.id} className="max-w-screen-lg mx-auto px-4 py-8">
       <div className="mt-16 my-0 md:my-8 flex flex-col md:flex-row">

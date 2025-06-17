@@ -1,14 +1,19 @@
-import AnimatedText from "@/components/AnimatedText";
+"use client";
+import AnimatedText from "@/components/landing/AnimatedText";
 import clsx from "clsx";
 import { motion } from "@/lib/motion";
+import { mentorsFeatures, usersFeatures } from "@/constants";
+import { useState } from "react";
 
-function Features({ features }) {
-  if (!features) return null;
+function Features() {
+  const [activeFeature, setActiveFeature] = useState("users"); // 'users' or 'mentors'
+  const features = activeFeature === "users" ? usersFeatures : mentorsFeatures;
+
   return (
     <section id={features.id} className="max-w-screen-md mx-auto px-4 py-12">
       <div className="my-8 md:my-12 max-w-none flex flex-col items-center prose prose-lg text-center">
         <h1 className="mb-3 font-roboto leading-none md:leading-16">
-          <AnimatedText text={features.title} />
+          <AnimatedText text={features.title} key={activeFeature} />
         </h1>
         <motion.div
           className="h-2 bg-gradient-to-r from-primary to-secondary rounded-full overflow-hidden [--w:200px] md:[--w:350px] mb-4"
@@ -26,23 +31,58 @@ function Features({ features }) {
           </motion.p>
         )}
       </div>
+
+      {/* Feature Switcher */}
+      <div className="flex justify-center mb-8">
+        <div className="relative bg-gray-100 rounded-full p-1 shadow-inner">
+          <div className="flex">
+            <button
+              onClick={() => setActiveFeature("users")}
+              className={clsx(
+                "relative px-12 py-3 rounded-full text-lg font-medium transition-all duration-300 ease-in-out",
+                activeFeature === "users"
+                  ? "text-white shadow-md bg-gradient-to-r from-primary to-secondary"
+                  : "text-gray-600 hover:text-gray-800"
+              )}
+            >
+              Users
+            </button>
+            <button
+              onClick={() => setActiveFeature("mentors")}
+              className={clsx(
+                "relative px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 ease-in-out",
+                activeFeature === "mentors"
+                  ? "text-white shadow-md bg-gradient-to-r from-primary to-secondary"
+                  : "text-gray-600 hover:text-gray-800"
+              )}
+            >
+              Mentors
+            </button>
+          </div>
+        </div>
+      </div>
+
       <motion.div
+        key={activeFeature} // This will trigger re-animation when switching
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        animate="visible"
+        viewport={{ once: false }}
         className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6"
       >
         {features.cards.map((feat, index) => (
           <motion.div
-            key={index}
+            key={`${activeFeature}-${index}`}
             variants={{
               hidden: { x: "-100%", opacity: 0 },
               visible: { x: 0, opacity: 1 },
             }}
             transition={{ delay: 0.25 + index * 0.25 }}
-            className={clsx("shadow-md shadow-primary/10 hover:bg-primary/5 border-primary/10 border-2 card relative overflow-hidden group pb-4 px-12", {
-              "col-span-2": index === features.cards.length - 1 && features.cards.length % 2 === 1,
-            })}
+            className={clsx(
+              "shadow-md shadow-primary/10 hover:bg-primary/5 border-primary/10 border-2 card relative overflow-hidden group pb-4 px-12",
+              {
+                "col-span-2": index === features.cards.length - 1 && features.cards.length % 2 === 1,
+              }
+            )}
           >
             <div className="relative mb-4 mt-4">
               <div
