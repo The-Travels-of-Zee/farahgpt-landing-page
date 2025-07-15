@@ -124,6 +124,19 @@ function Footer() {
                 Privacy policy
               </motion.a>
             )}
+            {footer.legalLinks.termsAndConditions && (
+              <motion.a
+                variants={{
+                  hidden: { opacity: 0, scale: 0.4 },
+                  visible: { opacity: 1, scale: 1 },
+                }}
+                transition={{ delay: 0.25 }}
+                className="font-bold hover:text-accent ease-in-out duration-200"
+                href="/terms-and-conditions"
+              >
+                Terms And Conditions
+              </motion.a>
+            )}
 
             <motion.p
               variants={{

@@ -167,7 +167,7 @@ export const faq = {
 export const footer = {
   id: "footer",
   legalLinks: {
-    // termsAndConditions: true,
+    termsAndConditions: true,
     // cookiesPolicy: true,
     privacyPolicy: true,
   },
@@ -438,5 +438,118 @@ FarahGPT
 🕌 With sincerity and responsibility,  
 **Team Farah**
 
+`,
+};
+
+export const termsAndConditions = {
+  content: `# Subscription Terms
+
+## FarahGPT Monthly Access
+
+- **Subscription Title:** FarahGPT Monthly Access  
+- **Length:** 1 month (auto-renewable)  
+- **Price:** \$9.99 per month  
+- **Features:** Unlimited queries, priority responses, full chat history
+
+### Auto-Renewal Terms
+
+- Payment charged to iTunes Account at purchase confirmation  
+- Subscription automatically renews unless auto-renew is turned off at least 24 hours before the current period ends  
+- Account charged for renewal within 24 hours prior to end of current period  
+- Manage and cancel subscriptions in App Store Account Settings  
+- No cancellation allowed during active subscription period
+
+---
+
+## User Agreement
+
+By using FarahGPT, you agree to:
+
+- Use the app for Islamic knowledge and education purposes  
+- Respect Islamic values in all interactions  
+- Not misuse the AI responses for harmful purposes  
+- Provide accurate information when creating your account  
+- Keep your account credentials secure  
+
+> FarahGPT provides AI-generated Islamic guidance based on Quran and Sunnah.  
+> For important religious decisions, please consult qualified Islamic scholars.
+
+---
+
+## User Conduct
+
+When using FarahGPT:
+
+- Maintain Islamic etiquette (Adab) in conversations  
+- Seek knowledge with sincere intention (Niyyah)  
+- Do not share inappropriate or offensive content  
+- Respect different schools of Islamic thought  
+- Report any content that conflicts with Islamic teachings  
+- Help fellow Muslims in their learning journey
+
+---
+
+## Content & Liability
+
+### Content Accuracy
+
+- We strive to provide accurate Islamic information  
+- AI responses are based on established Islamic sources  
+- Users should verify important religious matters with scholars  
+- The app supplements but does not replace traditional Islamic education
+
+### Limitation of Liability
+
+- FarahGPT is not liable for decisions made based solely on app content  
+- We are not responsible for technical issues or service interruptions  
+- Users are responsible for their own religious interpretations and actions
+
+---
+
+## Privacy & Data
+
+### Your Privacy
+
+- We protect your personal information and conversations  
+- Data is encrypted and stored securely  
+- We do not share your private conversations  
+- Account deletion removes all associated data  
+- Chat history is backed up for Premium users only
+
+### Data Usage
+
+- We collect data to improve your Islamic learning experience  
+- Anonymous usage data helps us enhance the app  
+- No personal information is sold to third parties
+
+---
+
+## Account Management
+
+### Account Security
+
+- You are responsible for keeping your account secure  
+- Choose a strong password and keep it confidential  
+- One account per person is permitted  
+- Report any security issues immediately
+
+### Account Termination
+
+- You may delete your account anytime through app settings  
+- We reserve the right to suspend accounts that violate these terms  
+- All data is permanently removed when you delete your account
+
+---
+
+## Contact & Support
+
+### Need Help?
+
+For any questions about these Terms of Use, Islamic content concerns, technical support, or app feedback:
+
+📧 **Email:** [info@thetravelsofzee.com](mailto:info@thetravelsofzee.com)  
+We aim to respond to all inquiries within 48 hours.
+
+**App Version:** 1.0
 `,
 };
