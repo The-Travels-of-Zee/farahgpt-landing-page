@@ -57,14 +57,18 @@ function AppBanner() {
             >
               {appBanner.googlePlayLink && (
                 <li className="m-0 p-0">
-                  <Link href={"/"}>
+                  <Link
+                    href={"https://play.google.com/store/apps/details?id=com.app.farahgpt"}
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <img className="h-14" alt="google play logo" src="/stores/google-play.svg" />
                   </Link>
                 </li>
               )}
               {appBanner.appStoreLink && (
-                <li className="m-0 p-0">
-                  <Link href={"/"}>
+                <li className="m-0 p-0" rel="noopener">
+                  <Link href={"https://apps.apple.com/us/app/farahgpt/id6746275409"} target="_blank">
                     <img className="h-14" alt="app store logo" src="/stores/app-store.svg" />
                   </Link>
                 </li>
