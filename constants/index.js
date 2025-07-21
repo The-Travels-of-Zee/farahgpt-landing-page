@@ -30,7 +30,7 @@ export const header = {
   subtitle: "Join a growing ummah of students and mentors...",
   screenshots: ["/screenshots/explore-courses.webp"],
   rewards: ["إن شاءالله"],
-  usersDescription: "2,000+ people already in the waiting list",
+  usersDescription: "2,000+ people are already using FarahGPT",
   headlineMark: [2, 5],
   buttons: true,
 };
