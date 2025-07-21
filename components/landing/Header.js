@@ -5,7 +5,7 @@ import SingleScreenshot from "@/components/landing/SingleScreenshot";
 // import SVGWave from "@/public/svg/wave";
 import SVGBlob from "@/public/svg/blob";
 import InputEmail from "./InputEmail";
-import { header } from "@/constants";
+import { appBanner, header } from "@/constants";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -100,13 +100,13 @@ function Header() {
                 {header.buttons && pathname === "/" && (
                   <li className="flex flex-row gap-5 my-8">
                     <Link
-                      href="/users"
+                      href="#app-banner"
                       className="block px-4 py-2 rounded-md text-sm font-medium border no-underline text-muted border-secondary bg-secondary hover:bg-transparent hover:text-secondary hover:border-secondary transition"
                     >
                       Become a User
                     </Link>
                     <Link
-                      href="/mentors"
+                      href="#app-banner"
                       className="block px-4 py-2 rounded-md text-sm font-medium border no-underline border-primary text-muted bg-primary hover:text-primary hover:bg-transparent hover:border-primary transition"
                     >
                       Become a Mentor
@@ -114,6 +114,33 @@ function Header() {
                   </li>
                 )}
                 {(pathname === "/users" || pathname === "/mentors") && (
+                  <motion.ul
+                    initial={{ opacity: 0, y: "100%" }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8 }}
+                    className="list-none flex gap-4 my-6 p-0 w-full"
+                  >
+                    {appBanner.googlePlayLink && (
+                      <li className="m-0 p-0">
+                        <Link
+                          href={"https://play.google.com/store/apps/details?id=com.app.farahgpt"}
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <img className="h-14" alt="google play logo" src="/stores/google-play.svg" />
+                        </Link>
+                      </li>
+                    )}
+                    {appBanner.appStoreLink && (
+                      <li className="m-0 p-0" rel="noopener">
+                        <Link href={"https://apps.apple.com/us/app/farahgpt/id6746275409"} target="_blank">
+                          <img className="h-14" alt="app store logo" src="/stores/app-store.svg" />
+                        </Link>
+                      </li>
+                    )}
+                  </motion.ul>
+                )}
+                {/* {(pathname === "/users" || pathname === "/mentors") && (
                   <li className=" w-full max-w-md">
                     <div className="my-8">
                       <InputEmail title="Notify Me" apiUrl="/api/newsletter" type={header.type} />
@@ -129,7 +156,7 @@ function Header() {
                       </Link>
                     </div>
                   </li>
-                )}
+                )} */}
               </motion.ul>
               {/* <motion.div
                 initial={{ opacity: 0, y: 30 }}

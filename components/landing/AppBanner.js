@@ -31,8 +31,8 @@ function AppBanner() {
           duration: 0.2,
         }}
       >
-        <div className="p-4 bg-(--primary-light) text-(--dark) rounded-lg flex flex-col items-center md:flex-row">
-          <div className="flex-1 flex flex-col items-center justify-center min-h-full">
+        <div className="p-6 bg-(--primary-light) text-(--dark) rounded-lg flex flex-col items-center md:flex-row">
+          <div className="flex-1 flex flex-col items-start justify-center min-h-full">
             <motion.h2
               initial={{ opacity: 0, y: "-100%" }}
               animate={{ opacity: 1, y: 0 }}
@@ -73,8 +73,13 @@ function AppBanner() {
                   </Link>
                 </li>
               )}
-              <li className="m-0 p-0">
-                <p>We Will Notify You As We Launch</p>
+              <li className="m-0 p-0 mx-auto flex items-center gap-3">
+                <div className="relative flex items-center justify-center">
+                  <div className="animate-ping absolute h-4 w-4 rounded-full bg-emerald-400 opacity-75"></div>
+                  <div className="animate-pulse absolute h-3 w-3 rounded-full bg-emerald-500 opacity-60"></div>
+                  <div className="relative h-2 w-2 rounded-full bg-emerald-600"></div>
+                </div>
+                <p className="font-medium">LIVE NOW</p>
               </li>
             </motion.ul>
           </div>
