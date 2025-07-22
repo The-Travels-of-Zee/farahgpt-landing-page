@@ -1,5 +1,3 @@
-import { time } from "framer-motion";
-
 export const appName = "FarahGPT";
 
 export const seoConfig = {
