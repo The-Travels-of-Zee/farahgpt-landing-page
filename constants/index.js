@@ -176,11 +176,12 @@ export const footer = {
     link: "https://business.thetravelsofzee.com/",
   },
   socials: {
-    instagram: "https://instagram.com/google",
-    facebook: "https://facebook.com/google",
+    instagram: "https://www.instagram.com/farahgpt?igsh=cjkyMnZhZnIyM2tz&utm_source=qr",
+    facebook: "https://www.facebook.com/share/1EejMRmzs4/?mibextid=wwXIfr",
     twitter: "https://x.com/google",
     upwork: "https://www.upwork.com/agencies/1900660843112486960/",
     linkedin: "https://www.linkedin.com/company/farahgpt/",
+    tiktok: "https://www.tiktok.com/@farahgpt?_t=ZS-8yDjWFcjHXw&_r=1",
   },
   links: [
     { href: "/#features", title: "Features" },
