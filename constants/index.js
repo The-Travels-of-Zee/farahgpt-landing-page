@@ -164,6 +164,7 @@ export const faq = {
   ],
 };
 
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6";
 export const footer = {
   id: "footer",
   legalLinks: {
@@ -175,14 +176,19 @@ export const footer = {
     title: "The Travels of Zee",
     link: "https://business.thetravelsofzee.com/",
   },
-  socials: {
-    instagram: "https://www.instagram.com/farahgpt?igsh=cjkyMnZhZnIyM2tz&utm_source=qr",
-    facebook: "https://www.facebook.com/share/1EejMRmzs4/?mibextid=wwXIfr",
-    twitter: "https://x.com/google",
-    upwork: "https://www.upwork.com/agencies/1900660843112486960/",
-    linkedin: "https://www.linkedin.com/company/farahgpt/",
-    tiktok: "https://www.tiktok.com/@farahgpt?_t=ZS-8yDjWFcjHXw&_r=1",
-  },
+  socials: [
+    {
+      platform: "Instagram",
+      icon: FaInstagram,
+      link: "https://www.instagram.com/farahgpt?igsh=cjkyMnZhZnIyM2tz&utm_source=qr",
+    },
+    { platform: "Facebook", icon: FaFacebookF, link: "https://www.facebook.com/share/1EejMRmzs4/?mibextid=wwXIfr" },
+    // { platform: "Twitter", icon: FaTwitter, link: "https://x.com/farahgpt" },
+    // { icon: FaUpwork, platform: "Upwork", link: "https://www.upwork.com/agencies/1900660843112486960/" },
+    { platform: "LinkedIn", icon: FaLinkedinIn, link: "https://www.linkedin.com/company/farahgpt/" },
+    { platform: "TikTok", icon: FaTiktok, link: "https://www.tiktok.com/@farahgpt?_t=ZS-8yDjWFcjHXw&_r=1" },
+    { platform: "YouTube", icon: FaYoutube, link: "https://www.youtube.com/@farahgpt" },
+  ],
   links: [
     { href: "/#features", title: "Features" },
     { href: "/#how-it-works", title: "How it works" },
